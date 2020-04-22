@@ -6,6 +6,9 @@ build
 out
 *.iml
 
+.settings
+.project
+
 # Compiled class file
 *.class
 
