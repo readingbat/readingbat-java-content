@@ -12,7 +12,6 @@ public class FrontBack {
     }
 
     public static void main(String[] args) {
-
         System.out.println(frontBack("This is a test"));
         System.out.println(frontBack(""));
     }
