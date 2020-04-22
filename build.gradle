@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.athenian'
+group 'com.github.pambrose.readingbat'
 version '1.0-SNAPSHOT'
 
 repositories {
