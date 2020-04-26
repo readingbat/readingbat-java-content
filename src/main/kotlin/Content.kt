@@ -10,6 +10,11 @@ val content =
         packageName = "lambdas1"
         description = "This is a description of Lambdas 1"
       }
+
+      group("Lambdas 2") {
+        packageName = "lambdas2"
+        description = "This is a description of Lambdas 2"
+      }
     }
 
     java {
