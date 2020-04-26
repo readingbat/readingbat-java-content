@@ -3,6 +3,13 @@ import com.github.readingbat.dsl.readingBatContent
 val content =
   readingBatContent {
 
+      kotlin {
+          group("Lambdas 1") {
+              packageName = "lambdas1"
+              description = "This is a description of Lambdas 1"
+          }
+      }
+
       java {
           repoRoot = "https://github.com/readingbat/readingbat-java-content"
 
