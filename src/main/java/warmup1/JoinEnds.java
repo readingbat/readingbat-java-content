@@ -7,7 +7,7 @@ public class JoinEnds {
             return str;
 
         String b = str.substring(0, 1);
-        String e = str.substring(str.length() - 1, str.length());
+        String e = str.substring(str.length() - 1);
 
         return e + b;
     }
