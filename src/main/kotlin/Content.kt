@@ -7,8 +7,13 @@ val content =
       repoRoot = "https://github.com/readingbat/readingbat-java-content"
 
       group("Lambdas 1") {
-        packageName = "lambdas1"
+        packageName = "lambda1"
         description = "This is a description of Lambdas 1"
+
+        challenge("StringLambda1") {
+          description = "This is a description of StringLambda1"
+        }
+
       }
 
       group("Lambdas 2") {
