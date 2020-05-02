@@ -1,6 +1,7 @@
+import com.github.readingbat.ReturnTypes
 import com.github.readingbat.dsl.readingBatContent
 
-val content =
+val content2 =
   readingBatContent {
 
     kotlin {
@@ -40,14 +41,21 @@ val content =
         description = "This is a description of Warmup 1"
 
         challenge("JoinEnds") {
-          description = """This is a description of joinEnds()"""
+          description = """This is a description of JoinEnds"""
           codingBatEquiv = "p141494"
+          returnType = ReturnTypes.StringType
+        }
 
-          "Blue Zebra" returns "aB"
-          "Tree" returns "eT"
-          "Re" returns "eR"
-          "p" returns "p"
-          "" returns ""
+        challenge("StringLength") {
+          description = """This is a description of StringLength"""
+          codingBatEquiv = "p141494"
+          returnType = ReturnTypes.IntType
+        }
+
+        challenge("LookForIt") {
+          description = """This is a description of LookForIt"""
+          returnType = ReturnTypes.BooleanType
+
         }
       }
 
