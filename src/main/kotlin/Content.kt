@@ -1,7 +1,6 @@
+import com.github.readingbat.ReturnTypes
 import com.github.readingbat.dsl.readingBatContent
-import kotlin.reflect.typeOf
 
-@kotlin.ExperimentalStdlibApi
 val content =
   readingBatContent {
 
@@ -44,18 +43,19 @@ val content =
         challenge("JoinEnds") {
           description = """This is a description of JoinEnds"""
           codingBatEquiv = "p141494"
-          returnType = typeOf<String>()
+          returnType = ReturnTypes.StringType
         }
 
         challenge("StringLength") {
           description = """This is a description of StringLength"""
           codingBatEquiv = "p141494"
-          returnType = typeOf<Int>()
+          returnType = ReturnTypes.IntType
         }
 
         challenge("LookForIt") {
           description = """This is a description of LookForIt"""
-          returnType = typeOf<Boolean>()
+          returnType = ReturnTypes.BooleanType
+
         }
       }
 
