@@ -18,5 +18,7 @@ public class Shifty {
 
     public static void main(String[] args) {
         arrayPrint(shifty(new int[]{1, 2, 3, 4, 5}));
+        arrayPrint(shifty(new int[]{7, 6, 5, 4, 3}));
+        arrayPrint(shifty(new int[]{1}));
     }
 }
