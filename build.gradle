@@ -36,13 +36,17 @@ test {
         showStandardStreams = true
     }
 }
+
 compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    kotlinOptions.jvmTarget = '1.8'
+    kotlinOptions.freeCompilerArgs += ['-Xuse-experimental=io.ktor.util.KtorExperimentalAPI',
+                                       '-Xuse-experimental=kotlin.ExperimentalStdlibApi',
+                                       '-XXLanguage:+InlineClasses']
 }
+
 compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    kotlinOptions.jvmTarget = '1.8'
+    kotlinOptions.freeCompilerArgs += ['-Xuse-experimental=io.ktor.util.KtorExperimentalAPI',
+                                       '-Xuse-experimental=kotlin.ExperimentalStdlibApi',
+                                       '-XXLanguage:+InlineClasses']
 }

@@ -1,4 +1,5 @@
 import com.github.readingbat.dsl.readingBatContent
+import kotlin.reflect.typeOf
 
 val content =
   readingBatContent {
@@ -40,14 +41,20 @@ val content =
         description = "This is a description of Warmup 1"
 
         challenge("JoinEnds") {
-          description = """This is a description of joinEnds()"""
+          description = """This is a description of JoinEnds"""
           codingBatEquiv = "p141494"
+          returnType = typeOf<String>()
+        }
 
-          "Blue Zebra" returns "aB"
-          "Tree" returns "eT"
-          "Re" returns "eR"
-          "p" returns "p"
-          "" returns ""
+        challenge("StringLength") {
+          description = """This is a description of StringLength"""
+          codingBatEquiv = "p141494"
+          returnType = typeOf<Int>()
+        }
+
+        challenge("LookForIt") {
+          description = """This is a description of LookForIt"""
+          returnType = typeOf<Boolean>()
         }
       }
 

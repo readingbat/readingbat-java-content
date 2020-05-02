@@ -15,8 +15,9 @@ public class JoinEnds {
     public static void main(String[] args) {
         System.out.println(joinEnds("Blue zebra"));
         System.out.println(joinEnds("Tree"));
-        System.out.println(joinEnds("Re"));
-        System.out.println(joinEnds("p"));
+        System.out.println(joinEnds("Truck"));
+        System.out.println(joinEnds("P"));
+        System.out.println(joinEnds("ab"));
         System.out.println(joinEnds(""));
     }
 }
