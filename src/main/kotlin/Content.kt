@@ -1,6 +1,7 @@
 import com.github.readingbat.dsl.readingBatContent
 import kotlin.reflect.typeOf
 
+@kotlin.ExperimentalStdlibApi
 val content =
   readingBatContent {
 
