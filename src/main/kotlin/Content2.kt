@@ -37,6 +37,11 @@ val content2 =
           description = """This is a description of HasEvens"""
           returnType = BooleanArrayType
         }
+
+        challenge("HasOdds") {
+          description = """This is a description of HasOdds"""
+          returnType = StringArrayType
+        }
       }
 
       group("Warmup 2") {
