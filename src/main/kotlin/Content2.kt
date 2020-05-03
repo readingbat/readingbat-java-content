@@ -1,3 +1,4 @@
+import com.github.readingbat.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
 val content2 =
@@ -82,6 +83,7 @@ val content2 =
 
         challenge("StringLambda1") {
           description = "This is a description of StringLambda1"
+          returnType = StringType
 
           "" returns "0a"
           "" returns "0a, 1b, 2c, 3d"
@@ -89,11 +91,11 @@ val content2 =
 
         challenge("StringLambda2") {
           description = "This is a description of StringLambda1"
+          returnType = StringType
 
           "" returns "0g"
           "" returns "0h, 1o, 2u, 3s, 4e"
         }
-
       }
 
       group("Lambdas 2") {
