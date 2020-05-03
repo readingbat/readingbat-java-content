@@ -1,4 +1,3 @@
-import com.github.readingbat.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
 val content2 =
@@ -14,33 +13,27 @@ val content2 =
         challenge("JoinEnds") {
           description = """This is a description of JoinEnds"""
           codingBatEquiv = "p141494"
-          returnType = StringType
         }
 
         challenge("StringLength") {
           description = """This is a description of StringLength"""
           codingBatEquiv = "p141494"
-          returnType = IntType
         }
 
         challenge("LookForIt") {
           description = """This is a description of LookForIt"""
-          returnType = BooleanType
         }
 
         challenge("Shifty") {
           description = """This is a description of Shifty"""
-          returnType = IntArrayType
         }
 
         challenge("HasEvens") {
           description = """This is a description of HasEvens"""
-          returnType = BooleanArrayType
         }
 
         challenge("HasOdds") {
           description = """This is a description of HasOdds"""
-          returnType = StringArrayType
         }
       }
 
