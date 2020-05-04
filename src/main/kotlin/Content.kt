@@ -6,6 +6,7 @@ val content =
 
     java {
       repoRoot = "https://github.com/readingbat/readingbat-java-content"
+      branchName = "master"
 
       group("Warmup 1") {
         packageName = "warmup1"
