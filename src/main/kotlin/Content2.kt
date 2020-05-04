@@ -1,4 +1,4 @@
-import com.github.readingbat.ReturnType.StringType
+import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
 val content2 =
