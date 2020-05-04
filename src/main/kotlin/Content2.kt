@@ -84,17 +84,11 @@ val content2 =
         challenge("StringLambda1") {
           description = "This is a description of StringLambda1"
           returnType = StringType
-
-          "" returns "0a"
-          "" returns "0a, 1b, 2c, 3d"
         }
 
         challenge("StringLambda2") {
           description = "This is a description of StringLambda1"
           returnType = StringType
-
-          "" returns "0g"
-          "" returns "0h, 1o, 2u, 3s, 4e"
         }
       }
 
