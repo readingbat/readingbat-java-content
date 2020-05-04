@@ -1,36 +1,8 @@
+import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
-
-    kotlin {
-      repoRoot = "https://github.com/readingbat/readingbat-java-content"
-
-      group("Lambdas 1") {
-        packageName = "lambda1"
-        description = "This is a description of Lambdas 1"
-
-        challenge("StringLambda1") {
-          description = "This is a description of StringLambda1"
-
-          "" returns "0a"
-          "" returns "0a, 1b, 2c, 3d"
-        }
-
-        challenge("StringLambda2") {
-          description = "This is a description of StringLambda1"
-
-          "" returns "0g"
-          "" returns "0h, 1o, 2u, 3s, 4e"
-        }
-
-      }
-
-      group("Lambdas 2") {
-        packageName = "lambdas2"
-        description = "This is a description of Lambdas 2"
-      }
-    }
 
     java {
       repoRoot = "https://github.com/readingbat/readingbat-java-content"
@@ -40,14 +12,29 @@ val content =
         description = "This is a description of Warmup 1"
 
         challenge("JoinEnds") {
-          description = """This is a description of joinEnds()"""
+          description = """This is a description of JoinEnds"""
           codingBatEquiv = "p141494"
+        }
 
-          "Blue Zebra" returns "aB"
-          "Tree" returns "eT"
-          "Re" returns "eR"
-          "p" returns "p"
-          "" returns ""
+        challenge("StringLength") {
+          description = """This is a description of StringLength"""
+          codingBatEquiv = "p141494"
+        }
+
+        challenge("LookForIt") {
+          description = """This is a description of LookForIt"""
+        }
+
+        challenge("Shifty") {
+          description = """This is a description of Shifty"""
+        }
+
+        challenge("HasEvens") {
+          description = """This is a description of HasEvens"""
+        }
+
+        challenge("HasOdds") {
+          description = """This is a description of HasOdds"""
         }
       }
 
@@ -84,6 +71,30 @@ val content =
       group("Array 2") {
         packageName = "array2"
         description = "This is a description of Array 2"
+      }
+    }
+
+    kotlin {
+      repoRoot = "https://github.com/readingbat/readingbat-java-content"
+
+      group("Lambdas 1") {
+        packageName = "lambda1"
+        description = "This is a description of Lambdas 1"
+
+        challenge("StringLambda1") {
+          description = "This is a description of StringLambda1"
+          returnType = StringType
+        }
+
+        challenge("StringLambda2") {
+          description = "This is a description of StringLambda1"
+          returnType = StringType
+        }
+      }
+
+      group("Lambdas 2") {
+        packageName = "lambdas2"
+        description = "This is a description of Lambdas 2"
       }
     }
   }
