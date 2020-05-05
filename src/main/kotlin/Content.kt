@@ -77,7 +77,7 @@ val content =
 
     kotlin {
       repoRoot = "https://github.com/readingbat/readingbat-java-content"
-      branchName = "master"
+      branchName = "dev"
 
       group("Lambdas 1") {
         packageName = "lambda1"
