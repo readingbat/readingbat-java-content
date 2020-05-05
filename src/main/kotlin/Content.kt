@@ -1,12 +1,15 @@
 import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
+val repoName = "https://github.com/readingbat/readingbat-java-content"
+val branch = "master"
+
 val content =
   readingBatContent {
 
     java {
-      repoRoot = "https://github.com/readingbat/readingbat-java-content"
-      branchName = "master"
+      repoRoot = repoName
+      branchName = branch
 
       group("Warmup 1") {
         packageName = "warmup1"
@@ -76,8 +79,8 @@ val content =
     }
 
     kotlin {
-      repoRoot = "https://github.com/readingbat/readingbat-java-content"
-      branchName = "master"
+      repoRoot = repoName
+      branchName = branch
 
       group("Lambdas 1") {
         packageName = "lambda1"
