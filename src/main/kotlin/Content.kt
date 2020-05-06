@@ -1,14 +1,14 @@
+import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
-val repoName = "https://github.com/readingbat/readingbat-java-content"
 val branch = "master"
 
 val content =
   readingBatContent {
 
     java {
-      repoRoot = repoName
+      repo = GitHubRepo("readingbat", "readingbat-java-content")
       branchName = branch
 
       group("Warmup 1") {
@@ -79,7 +79,7 @@ val content =
     }
 
     kotlin {
-      repoRoot = repoName
+      repo = GitHubRepo("readingbat", "readingbat-java-content")
       branchName = branch
 
       group("Lambdas 1") {
