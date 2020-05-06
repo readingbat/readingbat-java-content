@@ -2,7 +2,7 @@ import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
 val repoName = "https://github.com/readingbat/readingbat-java-content"
-val branch = "master"
+val branch = "dev"
 
 val content =
   readingBatContent {
