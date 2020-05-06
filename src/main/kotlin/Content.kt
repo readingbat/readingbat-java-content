@@ -2,7 +2,7 @@ import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.readingBatContent
 
-val branch = "dev"
+val branch = "master"
 
 val content =
   readingBatContent {
