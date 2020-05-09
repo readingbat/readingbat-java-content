@@ -18,13 +18,20 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-
     implementation "com.github.readingbat:readingbat-core:${readingbat_version}"
     implementation "com.github.pambrose.common-utils:core-utils:${utils_version}"
-
     implementation "io.github.microutils:kotlin-logging:${logging_version}"
 
     testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+sourceSets {
+    main.java.srcDirs = ['src/main/java']
+    main.kotlin.srcDirs = ['src/main/kotlin']
+    test.java.srcDirs = ['src/test/java']
+    test.kotlin.srcDirs = ['src/test/kotlin']
+    main.resources.srcDirs = ['src/main/resources']
+    test.resources.srcDirs = ['src/main/testresources']
 }
 
 test {
