@@ -16,29 +16,29 @@ val content =
         description = "This is a description of Warmup 1"
 
         challenge("JoinEnds") {
-          description = """This is a description of JoinEnds"""
+          description = "This is a *description* of **JoinEnds**"
           codingBatEquiv = "p141494"
         }
 
         challenge("StringLength") {
-          description = """This is a description of StringLength"""
+          description = "This is a description of StringLength"
           codingBatEquiv = "p141494"
         }
 
         challenge("LookForIt") {
-          description = """This is a description of LookForIt"""
+          description = "This is a description of LookForIt"
         }
 
         challenge("Shifty") {
-          description = """This is a description of Shifty"""
+          description = "This is a description of Shifty"
         }
 
         challenge("HasEvens") {
-          description = """This is a description of HasEvens"""
+          description = "This is a description of HasEvens"
         }
 
         challenge("HasOdds") {
-          description = """This is a description of HasOdds"""
+          description = "This is a description of HasOdds"
         }
       }
 
