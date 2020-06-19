@@ -19,5 +19,7 @@ public class HasEvens {
         arrayPrint(hasEvens(new int[]{4, 6, 8}));
         arrayPrint(hasEvens(new int[]{5}));
         arrayPrint(hasEvens(new int[]{6}));
+        arrayPrint(hasEvens(new int[]{101}));
+        arrayPrint(hasEvens(new int[]{99, 84}));
     }
 }

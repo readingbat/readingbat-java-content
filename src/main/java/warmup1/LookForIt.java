@@ -19,5 +19,6 @@ public class LookForIt {
         System.out.println(lookForIt("aa"));
         System.out.println(lookForIt("a"));
         System.out.println(lookForIt(""));
+        System.out.println(lookForIt("hello"));
     }
 }

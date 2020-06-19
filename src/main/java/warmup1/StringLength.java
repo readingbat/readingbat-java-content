@@ -22,5 +22,6 @@ public class StringLength {
         System.out.println(examine("aa"));
         System.out.println(examine("a"));
         System.out.println(examine(""));
+        System.out.println(examine("hello"));
     }
 }

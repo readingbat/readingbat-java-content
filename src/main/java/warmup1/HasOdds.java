@@ -20,7 +20,9 @@ public class HasOdds {
     public static void main(String[] args) {
         arrayPrint(hasOdds(new int[]{5, 4, 5}));
         arrayPrint(hasOdds(new int[]{4, 6, 8}));
-        arrayPrint(hasOdds(new int[]{5}));
-        arrayPrint(hasOdds(new int[]{6}));
+        arrayPrint(hasOdds(new int[]{5, 7}));
+        arrayPrint(hasOdds(new int[]{1, 2, 3, 4, 5}));
+        arrayPrint(hasOdds(new int[]{7, 6, 5, 4, 3}));
+        arrayPrint(hasOdds(new int[]{1}));
     }
 }
