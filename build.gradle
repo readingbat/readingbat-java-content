@@ -16,7 +16,6 @@ targetCompatibility = 1.8
 group 'com.github.readingbat'
 version '1.0-SNAPSHOT'
 
-
 repositories {
     maven { url 'https://maven-central.storage-download.googleapis.com/repos/central/data/' }
     maven { url 'https://kotlin.bintray.com/ktor' }
