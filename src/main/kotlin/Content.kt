@@ -6,9 +6,11 @@ val branch = "master"
 
 val content =
   readingBatContent {
+    //cacheChallenges = false
 
     java {
       repo = GitHubRepo("readingbat", "readingbat-java-content")
+      //repo = FileSystemSource("./")
       branchName = branch
 
       group("Warmup 1") {
@@ -18,6 +20,11 @@ val content =
         challenge("JoinEnds") {
           description = "This is a *description* of **JoinEnds**"
           codingBatEquiv = "p141494"
+        }
+
+        challenge("AddItUp") {
+          description = "This is a *description* of **AddItUp**"
+          //codingBatEquiv = "p141494"
         }
 
         challenge("StringLength") {
