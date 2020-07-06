@@ -1,16 +1,17 @@
+import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.StringType
+import com.github.readingbat.dsl.isProduction
 import com.github.readingbat.dsl.readingBatContent
 
 val branch = "master"
 
 val content =
   readingBatContent {
-    //cacheChallenges = false
+    cacheChallenges = !isProduction()
 
     java {
-      repo = GitHubRepo("readingbat", "readingbat-java-content")
-      //repo = FileSystemSource("./")
+      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
       branchName = branch
 
       group("Warmup 1") {
@@ -86,7 +87,7 @@ val content =
     }
 
     kotlin {
-      repo = GitHubRepo("readingbat", "readingbat-java-content")
+      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
       branchName = branch
 
       group("Lambdas 1") {
