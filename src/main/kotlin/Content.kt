@@ -8,7 +8,6 @@ val branch = "master"
 
 val content =
   readingBatContent {
-    cacheChallenges = !isProduction()
 
     java {
       repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
