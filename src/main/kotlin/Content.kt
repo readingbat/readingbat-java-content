@@ -8,10 +8,10 @@ val branch = "master"
 
 val content =
   readingBatContent {
+    repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
+    branchName = branch
 
     java {
-      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
-      branchName = branch
 
       group("Warmup 1") {
         packageName = "warmup1"
@@ -86,8 +86,6 @@ val content =
     }
 
     kotlin {
-      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
-      branchName = branch
 
       group("Lambdas 1") {
         packageName = "lambda1"
