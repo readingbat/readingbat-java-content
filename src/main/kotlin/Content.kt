@@ -4,12 +4,10 @@ import com.github.readingbat.dsl.ReturnType.StringType
 import com.github.readingbat.dsl.isProduction
 import com.github.readingbat.dsl.readingBatContent
 
-val branch = "master"
-
 val content =
   readingBatContent {
     repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-java-content") else FileSystemSource("./")
-    branchName = branch
+    branchName = "master"
 
     java {
 
