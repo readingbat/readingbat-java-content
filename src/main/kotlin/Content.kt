@@ -16,14 +16,10 @@ val content =
         description = "This is a description of Warmup 1"
 
         challenge("JoinEnds") {
-          description = "This is a *description* of **JoinEnds**"
           codingBatEquiv = "p141494"
         }
 
-        challenge("AddItUp") {
-          description = "This is a *description* of **AddItUp**"
-          //codingBatEquiv = "p141494"
-        }
+        challenge("AddItUp")
 
         challenge("StringLength") {
           description = "This is a description of StringLength"

@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc This is a *description* of **JoinEnds**
+
 public class JoinEnds {
 
     public static String joinEnds(String str) {
