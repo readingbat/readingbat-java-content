@@ -1,7 +1,6 @@
 import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
-import com.github.readingbat.dsl.ReturnType.IntType
-import com.github.readingbat.dsl.ReturnType.StringType
+import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.isProduction
 import com.github.readingbat.dsl.readingBatContent
 
@@ -80,6 +79,9 @@ val content =
 
         includeFilesWithType = "StringLambda*.kt" returns StringType
 
+        challenge("LambdaList1") {
+          returnType = IntListType
+        }
       }
 
       group("Lambdas 1") {

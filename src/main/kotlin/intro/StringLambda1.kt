@@ -1,11 +1,11 @@
 package intro
 
-fun upperIt(s: String): String {
+fun upperIt1(s: String): String {
   return s.toUpperCase() + s.toUpperCase()
 }
 
 fun func1(s: String): String {
-  return upperIt(s)
+  return upperIt1(s)
 }
 
 fun main() {

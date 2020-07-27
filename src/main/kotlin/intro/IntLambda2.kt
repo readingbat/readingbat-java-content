@@ -1,9 +1,9 @@
 package intro
 
-val doubleIt: (Int) -> Int = { i: Int -> i * 2 }
+val doubleIt2: (Int) -> Int = { i: Int -> i * 2 }
 
 fun func2(i: Int): Int {
-  return doubleIt.invoke(i)
+  return doubleIt2.invoke(i)
 }
 
 fun main() {

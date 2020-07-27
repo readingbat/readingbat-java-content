@@ -1,11 +1,11 @@
 package intro
 
-fun doubleIt(i: Int): Int {
+fun doubleIt1(i: Int): Int {
   return i * 2
 }
 
 fun func1(i: Int): Int {
-  return doubleIt(i)
+  return doubleIt1(i)
 }
 
 fun main() {
