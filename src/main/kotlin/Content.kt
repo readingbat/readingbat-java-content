@@ -43,11 +43,6 @@ val content =
         }
       }
 
-      group("Warmup 2") {
-        packageName = "warmup2"
-        description = "This is a description of Warmup 2"
-      }
-
       group("String 1") {
         packageName = "string1"
         description = "This is a description of String 1"
@@ -86,24 +81,17 @@ val content =
         }
       }
 
-      group("Lambdas 1") {
+      group("Misc Lambdas") {
         packageName = "lambda1"
-        description = "This is a description of Lambdas 1"
+        description = "Miscellaneous Lambdas"
 
         challenge("StringLambda1") {
-          description = "This is a description of StringLambda1"
           returnType = StringType
         }
 
         challenge("StringLambda2") {
-          description = "This is a description of StringLambda1"
           returnType = StringType
         }
-      }
-
-      group("Lambdas 2") {
-        packageName = "lambdas2"
-        description = "This is a description of Lambdas 2"
       }
     }
   }
