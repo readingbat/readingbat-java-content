@@ -71,14 +71,9 @@ val content =
         description = "Introduction to Lambdas"
 
         includeFilesWithType = "NoArgLambda*.kt" returns IntType
-
         includeFilesWithType = "IntLambda*.kt" returns IntType
-
         includeFilesWithType = "StringLambda*.kt" returns StringType
-
-        challenge("LambdaList1") {
-          returnType = IntListType
-        }
+        includeFilesWithType = "IntListLambda*.kt" returns IntListType
       }
 
       group("Misc Lambdas") {
