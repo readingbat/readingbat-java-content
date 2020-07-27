@@ -17,6 +17,6 @@ fun func4(i: Int, funcs: List<(Int) -> Int>): List<Int> {
 
 fun main() {
   println(func4(5, listOf(tripleIt4, tripleIt4)))
-  println(func4(10, listOf(quadItIt4, tripleIt4)))
-  println(func4(20, listOf(::doubleIt4, tripleIt4)))
+  println(func4(10, listOf(quadItIt4, tripleIt4, tripleIt4)))
+  println(func4(20, listOf(::doubleIt4, tripleIt4, ::doubleIt4)))
 }

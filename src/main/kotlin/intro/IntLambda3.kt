@@ -11,6 +11,7 @@ fun doubleIt3(i: Int): Int {
 
 val doubleIt3: (Int) -> Int = ::doubleIt3
 
+// Higher-order function as a parameter
 fun func3(i: Int, func: (Int) -> Int): Int {
   return func.invoke(i)
 }

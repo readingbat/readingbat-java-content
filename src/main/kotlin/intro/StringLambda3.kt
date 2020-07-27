@@ -9,6 +9,7 @@ fun upperIt3(s: String): String {
   return s.toUpperCase() + s.toUpperCase()
 }
 
+// Higher-order function as a parameter
 fun func3(s: String, func: (String) -> String): String {
   return func.invoke(s)
 }
