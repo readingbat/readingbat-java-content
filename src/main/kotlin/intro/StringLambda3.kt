@@ -2,12 +2,12 @@ package intro
 
 val upperIt2: (String) -> String = { s: String -> s.toUpperCase() + s.toUpperCase() }
 
-val upperIt3: (String) -> String = { s: String -> s.toUpperCase() + s.toUpperCase() + s.toUpperCase() }
+// Simplify things with it
+val upperIt3: (String) -> String = { it.toUpperCase() + it.toUpperCase() + it.toUpperCase() }
 
 fun upperIt3(s: String): String {
   return s.toUpperCase() + s.toUpperCase()
 }
-
 
 fun func3(s: String, func: (String) -> String): String {
   return func.invoke(s)

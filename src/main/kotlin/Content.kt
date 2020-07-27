@@ -75,6 +75,8 @@ val content =
         packageName = "intro"
         description = "Introduction to Lambdas"
 
+        includeFilesWithType = "NoArgLambda*.kt" returns IntType
+
         includeFilesWithType = "IntLambda*.kt" returns IntType
 
         includeFilesWithType = "StringLambda*.kt" returns StringType

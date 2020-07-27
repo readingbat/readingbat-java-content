@@ -2,7 +2,8 @@ package intro
 
 val tripleIt3: (Int) -> Int = { i: Int -> i * 3 }
 
-val quadItIt3: (Int) -> Int = { i: Int -> i * 4 }
+// Simplify things with it
+val quadItIt3: (Int) -> Int = { it * 4 }
 
 fun doubleIt3(i: Int): Int {
   return i * 2
