@@ -1,4 +1,4 @@
-package lambda1
+package intro
 
 val tripleIt: (Int) -> Int = { i: Int -> i * 3 }
 

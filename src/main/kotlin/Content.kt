@@ -73,12 +73,14 @@ val content =
     kotlin {
 
       group("Lambda Intro") {
-        packageName = "lambda1"
-        description = "Introduction to Lambdas Examples"
+        packageName = "intro"
+        description = "Introduction to Lambdas"
 
-        includeFilesWithType = "Lambda*.kt" returns IntType
+        includeFilesWithType = "IntLambda*.kt" returns IntType
+
+        includeFilesWithType = "StringLambda*.kt" returns StringType
+
       }
-
 
       group("Lambdas 1") {
         packageName = "lambda1"

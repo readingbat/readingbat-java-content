@@ -1,6 +1,6 @@
-package lambda1
+package intro
 
-val doubleIt = { i: Int -> i * 2 }
+val doubleIt: (Int) -> Int = { i: Int -> i * 2 }
 
 fun func2(i: Int): Int {
   return doubleIt.invoke(i)

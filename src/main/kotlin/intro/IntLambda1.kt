@@ -1,4 +1,4 @@
-package lambda1
+package intro
 
 fun doubleIt(i: Int): Int {
   return i * 2
