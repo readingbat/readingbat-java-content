@@ -2,6 +2,7 @@
 package boolean_exprs;
 
 public class NotEqual {
+
     public static boolean compare(int val1, int val2) {
         boolean result = val1 != val2;
         return result;

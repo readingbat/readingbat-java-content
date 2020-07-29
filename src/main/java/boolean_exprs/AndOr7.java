@@ -1,6 +1,7 @@
 package boolean_exprs;
 
 public class AndOr7 {
+
     public static boolean compare(boolean val1, boolean val2, boolean val3) {
         boolean result = val1 || val2 || val3;
         return result;

@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc The [modulo](https://www.java67.com/2014/11/modulo-or-remainder-operator-in-java.html) operator (**%**) returns the remainder after dividing two numbers.
 
 public class Modulo1 {
+
     public static int mod(int num, int mod) {
         int result = num % mod;
         return result;

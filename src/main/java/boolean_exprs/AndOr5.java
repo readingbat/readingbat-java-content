@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc Which order are the **and** and the **or** evaluated?
 
 public class AndOr5 {
+
     public static boolean compare(boolean val1, boolean val2, boolean val3) {
         boolean result = val1 && val2 && val3;
         return result;

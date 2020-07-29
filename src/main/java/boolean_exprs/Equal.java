@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc Determine if two value are equal with the **==** operator. Notice the 2 **=** characters.
 
 public class Equal {
+
     public static boolean compare(int val1, int val2) {
         boolean result = val1 == val2;
         return result;

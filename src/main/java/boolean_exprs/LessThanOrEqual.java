@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc Determine if one value is greater than or equal to another with the **<=** operator. Notice the **=** comes after the **<**.
 
 public class LessThanOrEqual {
+
     public static boolean compare(int val1, int val2) {
         boolean result = val1 <= val2;
         return result;

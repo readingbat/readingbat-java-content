@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc The **not** operator flips a boolean value.
 
 public class AndOr3 {
+
     public static boolean compare(boolean val1, boolean val2) {
         boolean result = !(val1 && val2);
         return result;

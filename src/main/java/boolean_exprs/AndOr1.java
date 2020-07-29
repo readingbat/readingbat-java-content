@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc Truth tables
 
 public class AndOr1 {
+
     public static boolean compare(boolean val1, boolean val2) {
         boolean result = val1 && val2;
         return result;

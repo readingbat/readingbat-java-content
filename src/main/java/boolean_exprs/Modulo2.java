@@ -3,6 +3,7 @@ package boolean_exprs;
 // @desc **%2** is an easy way of testing if a number is odd or even.
 
 public class Modulo2 {
+
     public static boolean mod(int num) {
         int result = num % 2;
         return result == 0;
