@@ -3,11 +3,10 @@ package if_stmts;
 public class IfStmt3 {
 
     public static int ifIt(int x, boolean y) {
-        if ((x > 10) && y) {
+        if (x > 10 && y)
             return x + 10;
-        } else {
+        else
             return x;
-        }
     }
 
     public static void main(String[] args) {

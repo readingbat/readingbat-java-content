@@ -3,8 +3,9 @@ package if_stmts;
 public class IfStmt1 {
 
     public static int ifIt(int x) {
+        int retval = x;
         if (x > 10) {
-            return x;
+            return retval;
         } else {
             return 3;
         }
