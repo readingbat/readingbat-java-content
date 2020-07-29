@@ -4,7 +4,7 @@ package for_loops;
 
 public class ForLoop5 {
 
-    public static int LoopIt(String str, String x, int y) {
+    public static int loopIt(String str, String x, int y) {
         int result = 0;
         for (int i = y; i < str.length(); i++) {
             if (str.substring(i, i + 1).equals(x)) {
@@ -15,9 +15,9 @@ public class ForLoop5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(LoopIt("athenian", "e", 2));
-        System.out.println(LoopIt("apples", "p", 1));
-        System.out.println(LoopIt("hello", "a", 3));
-        System.out.println(LoopIt("aa", "a", 1));
+        System.out.println(loopIt("athenian", "e", 2));
+        System.out.println(loopIt("apples", "p", 1));
+        System.out.println(loopIt("hello", "a", 3));
+        System.out.println(loopIt("aa", "a", 1));
     }
 }

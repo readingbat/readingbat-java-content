@@ -4,7 +4,7 @@ package for_loops;
 
 public class ForLoop1 {
 
-    public static int LoopIt(String str) {
+    public static int loopIt(String str) {
         int result = 0;
         for (int i = 0; i < str.length(); i++) {
             result += 2;
@@ -13,11 +13,11 @@ public class ForLoop1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(LoopIt("hello"));
-        System.out.println(LoopIt("world"));
-        System.out.println(LoopIt("apples"));
-        System.out.println(LoopIt(""));
-        System.out.println(LoopIt("a"));
-        System.out.println(LoopIt("oof"));
+        System.out.println(loopIt("hello"));
+        System.out.println(loopIt("world"));
+        System.out.println(loopIt("apples"));
+        System.out.println(loopIt(""));
+        System.out.println(loopIt("a"));
+        System.out.println(loopIt("oof"));
     }
 }
