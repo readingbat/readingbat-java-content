@@ -11,7 +11,32 @@ val content =
 
     java {
 
-      group("Warmup 1 PAUL") {
+      group("Boolean Expressions") {
+        packageName = "boolean_exprs"
+        description = "Basic boolean expressions"
+
+        challenge("LessThan")
+
+        challenge("GreaterThan")
+
+        challenge("LessThanOrEqual")
+
+        challenge("GreaterThanOrEqual")
+
+        challenge("Equal")
+
+        challenge("NotEqual")
+
+        challenge("Modulo1")
+
+        challenge("Modulo2")
+
+        challenge("Modulo3")
+
+        includeFiles = "AndOr*.java"
+      }
+
+      group("Warmup 1") {
         packageName = "warmup1"
         description = "This is a description of Warmup 1"
 
@@ -22,25 +47,16 @@ val content =
         challenge("AddItUp")
 
         challenge("StringLength") {
-          description = "This is a description of StringLength"
           codingBatEquiv = "p141494"
         }
 
-        challenge("LookForIt") {
-          description = "This is a description of LookForIt"
-        }
+        challenge("LookForIt")
 
-        challenge("Shifty") {
-          description = "This is a description of Shifty"
-        }
+        challenge("Shifty")
 
-        challenge("HasEvens") {
-          description = "This is a description of HasEvens"
-        }
+        challenge("HasEvens")
 
-        challenge("HasOdds") {
-          description = "This is a description of HasOdds"
-        }
+        challenge("HasOdds")
       }
 
       group("String 1") {
