@@ -1,8 +1,8 @@
 package intro
 
-val evens = { i: Int -> i % 2 == 0 }
+val isEven: (Int) -> Boolean = { i: Int -> i % 2 == 0 }
 
-val odds = { i: Int -> i % 2 == 1 }
+val isOdd: (Int) -> Boolean = { i: Int -> i % 2 == 1 }
 
 fun addUp1(i: Int, func: (Int) -> Boolean): List<Int> {
   val list = mutableListOf<Int>()
@@ -17,13 +17,13 @@ fun addUp2(i: Int, func: (Int) -> Boolean): List<Int> {
   return (0..i).toList().filter(func)
 }
 
-fun addUp3(i: Int, func: (Int) -> Boolean): List<Int> = (0..i).toList().filter(func)
-
 fun main() {
-  println(addUp1(8, evens))
-  println(addUp1(8, odds))
-  println(addUp2(6, evens))
-  println(addUp2(6, odds))
-  println(addUp3(4, evens))
-  println(addUp3(4, odds))
+  println(addUp1(8, isEven))
+  println(addUp1(8, isOdd))
+  println(addUp2(6, isEven))
+  println(addUp2(6, isOdd))
+  println(addUp2(4, { i: Int -> i % 2 == 0 }))
+  println(addUp2(4, { i: Int -> i % 2 != 0 }))
+  println(addUp2(4, { it % 2 == 0 }))
+  println(addUp2(4, { it % 2 != 0 }))
 }
