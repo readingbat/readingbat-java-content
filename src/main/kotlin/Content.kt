@@ -68,26 +68,6 @@ val content =
 
         challenge("HasOdds")
       }
-
-      group("String 1") {
-        packageName = "string1"
-        description = "This is a description of String 1"
-      }
-
-      group("String 2") {
-        packageName = "string2"
-        description = "This is a description of String 2"
-      }
-
-      group("Array 1") {
-        packageName = "array1"
-        description = "This is a description of Array 1"
-      }
-
-      group("Array 2") {
-        packageName = "array2"
-        description = "This is a description of Array 2"
-      }
     }
 
     kotlin {
