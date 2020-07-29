@@ -27,13 +27,23 @@ val content =
 
         challenge("NotEqual")
 
-        challenge("Modulo1")
-
-        challenge("Modulo2")
-
-        challenge("Modulo3")
+        includeFiles = "Modulo*.java"
 
         includeFiles = "AndOr*.java"
+      }
+
+      group("If Statements") {
+        packageName = "if_stmts"
+        description = "Basic if statements"
+
+        includeFiles = "IfStmt*.java"
+      }
+
+      group("For Loops") {
+        packageName = "for_loops"
+        description = "Basic for loops"
+
+        includeFiles = "ForLoop*.java"
       }
 
       group("Warmup 1") {
