@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc **% 2** is an easy way of testing if a number is odd or even.
+// @desc **%2** is an easy way of testing if a number is odd or even.
 
 public class Modulo3 {
     public static boolean mod(int num) {
