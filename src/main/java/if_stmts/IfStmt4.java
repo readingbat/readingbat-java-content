@@ -17,6 +17,5 @@ public class IfStmt4 {
         System.out.println(ifIt(false, 11, 3));
         System.out.println(ifIt(false, 51, 32));
         System.out.println(ifIt(true, 1, 0));
-
     }
 }
