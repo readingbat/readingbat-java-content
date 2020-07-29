@@ -3,12 +3,13 @@ package if_stmts;
 public class IfStmt2 {
 
     public static int ifIt(int x) {
-        int retval = x;
+        int retval;
         if (x > 10) {
-            return retval + 5;
+            retval = x + 5;
         } else {
-            return retval;
+            retval = x;
         }
+        return retval;
     }
 
     public static void main(String[] args) {
