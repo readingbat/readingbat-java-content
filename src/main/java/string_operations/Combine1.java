@@ -1,6 +1,6 @@
 package string_operations;
 
-// @desc **s[-1]** is the last character of a string\
+// @desc **s[-1]** is the last character of a string
 
 public class Combine1 {
 
