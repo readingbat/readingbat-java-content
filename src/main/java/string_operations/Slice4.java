@@ -4,16 +4,16 @@ package string_operations;
 
 public class Slice4 {
 
-    public static String slice4(String s) {
+    public static String slice(String s) {
         String c = s.substring(0, 2);
         return c;
     }
 
     public static void main(String[] args) {
-        System.out.println(slice4("Car"));
-        System.out.println(slice4("Truck"));
-        System.out.println(slice4("556843"));
-        System.out.println(slice4("Elephant"));
-        System.out.println(slice4("Roses"));
+        System.out.println(slice("Car"));
+        System.out.println(slice("Truck"));
+        System.out.println(slice("556843"));
+        System.out.println(slice("Elephant"));
+        System.out.println(slice("Roses"));
     }
 }

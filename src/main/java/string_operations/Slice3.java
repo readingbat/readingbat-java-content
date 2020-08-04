@@ -4,7 +4,7 @@ package string_operations;
 
 public class Slice3 {
 
-    public static String slice3(String s) {
+    public static String slice(String s) {
         int length = s.length();
         int mid = (int) (length / 2);
         String c = s.substring(mid);
@@ -12,10 +12,10 @@ public class Slice3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(slice3("Car"));
-        System.out.println(slice3("Hello"));
-        System.out.println(slice3("556843"));
-        System.out.println(slice3("Elephant"));
-        System.out.println(slice3("Roses"));
+        System.out.println(slice("Car"));
+        System.out.println(slice("Hello"));
+        System.out.println(slice("556843"));
+        System.out.println(slice("Elephant"));
+        System.out.println(slice("Roses"));
     }
 }

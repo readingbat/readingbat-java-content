@@ -72,6 +72,29 @@ val content =
 
         challenge("HasOdds")
       }
+
+      group("String Operations") {
+        packageName = "string_operations"
+        description = "This is a description of String Operations"
+
+        challenge("GoodbyeName")
+
+        includeFiles = "Combine*.java"
+
+        includeFiles = "Concat*.java"
+
+        includeFiles = "Strlen*.java"
+
+        challenge("StartsWith")
+
+        challenge("EndsWith")
+
+        challenge("ContainsOper")
+
+        includeFiles = "Slice*.java"
+
+        challenge("Split")
+      }
     }
 
     kotlin {
