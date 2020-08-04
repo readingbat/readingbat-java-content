@@ -13,7 +13,7 @@ public class Slice3 {
 
     public static void main(String[] args) {
         System.out.println(slice3("Car"));
-        System.out.println(slice3("Truck"));
+        System.out.println(slice3("Hello"));
         System.out.println(slice3("556843"));
         System.out.println(slice3("Elephant"));
         System.out.println(slice3("Roses"));

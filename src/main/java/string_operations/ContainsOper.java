@@ -1,6 +1,6 @@
 package string_operations;
 
-// @desc The **in** operator returns True if a specified substring is found in a string.
+// @desc The **.contains** method returns True if a specified substring is found in a string.
 
 public class ContainsOper {
 
