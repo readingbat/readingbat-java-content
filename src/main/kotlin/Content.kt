@@ -71,7 +71,7 @@ val content =
 
       group("Warmup 1") {
         packageName = "warmup1"
-        description = "This is a description of Warmup 1"
+        description = "Warmup 1 Challenges"
 
         challenge("SayGoodbye")
 
@@ -92,6 +92,13 @@ val content =
         challenge("HasEvens")
 
         challenge("HasOdds")
+      }
+
+      group("Warmup 2") {
+        packageName = "warmup2"
+        description = "Warmup 2 Challenges"
+
+        includeFiles = "*.java"
       }
     }
 

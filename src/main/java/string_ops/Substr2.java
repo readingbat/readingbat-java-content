@@ -1,5 +1,7 @@
 package string_ops;
 
+// @desc Notice **substr()** can also be called with a single argument.
+
 public class Substr2 {
 
     public static String slice(String s) {
