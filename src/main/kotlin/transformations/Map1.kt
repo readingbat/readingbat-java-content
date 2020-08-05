@@ -1,4 +1,4 @@
-package intro
+package transformations
 
 val doubleIt: (Int) -> Int = { i: Int -> i * 2 }
 

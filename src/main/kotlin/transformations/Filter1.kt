@@ -1,4 +1,4 @@
-package intro
+package transformations
 
 val isEven: (Int) -> Boolean = { i: Int -> i % 2 == 0 }
 

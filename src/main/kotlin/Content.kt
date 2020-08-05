@@ -114,6 +114,14 @@ val content =
         includeFilesWithType = "IntListLambda*.kt" returns IntListType
       }
 
+      group("Collection Transformations") {
+        packageName = "intro"
+        description = "Basic collection transformations"
+
+        includeFilesWithType = "Filter*.kt" returns IntType
+        includeFilesWithType = "Map*.kt" returns IntListType
+      }
+
       group("Misc Lambdas") {
         packageName = "lambda1"
         description = "Miscellaneous Lambdas"
