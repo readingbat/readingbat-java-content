@@ -1,12 +1,12 @@
-package string_operations;
+package string_ops;
 
-// @desc The **int()** function truncates values. **int(5/2)** equals 2
+// @desc Casting with **(int)** truncates values. **int(5/2)** equals 2
 
 public class Split {
 
     public static String split(String out, String word) {
-        int length = (int) (out.length() / 2);
-        return out.substring(0, length) + word + out.substring(length);
+        int halfway = (int) (out.length() / 2);
+        return out.substring(0, halfway) + word + out.substring(halfway);
     }
 
     public static void main(String[] args) {

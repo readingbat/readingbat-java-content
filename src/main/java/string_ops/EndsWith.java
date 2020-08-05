@@ -1,4 +1,4 @@
-package string_operations;
+package string_ops;
 
 // @desc **endswith()** returns True if a string ends with a specified substring.
 
@@ -20,6 +20,5 @@ public class EndsWith {
         System.out.println(endsWith("", "World"));
         System.out.println(endsWith(" ", "Hello World "));
         System.out.println(endsWith(" ", "HelloWorld"));
-
     }
 }

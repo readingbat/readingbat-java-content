@@ -50,9 +50,30 @@ val content =
         includeFiles = "ForLoop*.java"
       }
 
+      group("String Operations") {
+        packageName = "string_ops"
+        description = "Basic String Operations"
+
+        challenge("StartsWith")
+
+        challenge("EndsWith")
+
+        challenge("Contains")
+
+        includeFiles = "Strlen*.java"
+
+        includeFiles = "Substr*.java"
+
+        includeFiles = "Concat*.java"
+
+        challenge("Split")
+      }
+
       group("Warmup 1") {
         packageName = "warmup1"
         description = "This is a description of Warmup 1"
+
+        challenge("SayGoodbye")
 
         challenge("JoinEnds") {
           codingBatEquiv = "p141494"
@@ -71,29 +92,6 @@ val content =
         challenge("HasEvens")
 
         challenge("HasOdds")
-      }
-
-      group("String Operations") {
-        packageName = "string_operations"
-        description = "This is a description of String Operations"
-
-        challenge("GoodbyeName")
-
-        includeFiles = "Combine*.java"
-
-        includeFiles = "Concat*.java"
-
-        includeFiles = "Strlen*.java"
-
-        challenge("StartsWith")
-
-        challenge("EndsWith")
-
-        challenge("ContainsOper")
-
-        includeFiles = "Slice*.java"
-
-        challenge("Split")
       }
     }
 

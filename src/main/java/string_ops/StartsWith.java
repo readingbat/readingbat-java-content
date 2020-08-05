@@ -1,4 +1,4 @@
-package string_operations;
+package string_ops;
 
 // @desc **startswith()** returns True if a string starts with a specified substring.
 

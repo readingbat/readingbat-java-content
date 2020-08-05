@@ -1,19 +1,16 @@
-package string_operations;
+package string_ops;
 
-// @desc The first character in a string is at index 0.
+// @desc A slice is inclusive of the starting index and exclusive of the ending index.
 
-public class Slice3 {
+public class Substr4 {
 
     public static String slice(String s) {
-        int length = s.length();
-        int mid = (int) (length / 2);
-        String c = s.substring(mid);
-        return c;
+        return s.substring(0, 2);
     }
 
     public static void main(String[] args) {
         System.out.println(slice("Car"));
-        System.out.println(slice("Hello"));
+        System.out.println(slice("Truck"));
         System.out.println(slice("556843"));
         System.out.println(slice("Elephant"));
         System.out.println(slice("Roses"));

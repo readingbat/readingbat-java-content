@@ -1,8 +1,8 @@
-package string_operations;
+package string_ops;
 
 // @desc A slice is inclusive of the starting index and exclusive of the ending index.
 
-public class Slice5 {
+public class Substr5 {
 
     public static String slice(String s) {
         String c = s.substring(2, 5);

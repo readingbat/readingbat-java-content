@@ -1,9 +1,11 @@
-package string_operations;
+package string_ops;
 
-public class Slice2 {
+// @desc The first character in a string is at index 0.
+
+public class Substr1 {
 
     public static String slice(String s) {
-        String c = s.substring(s.length() - 1);
+        String c = s.substring(0, 1);
         return c;
     }
 
