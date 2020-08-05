@@ -115,7 +115,7 @@ val content =
       }
 
       group("Collection Transformations") {
-        packageName = "intro"
+        packageName = "transformations"
         description = "Basic collection transformations"
 
         includeFilesWithType = "Filter*.kt" returns IntType
