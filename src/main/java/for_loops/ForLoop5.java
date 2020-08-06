@@ -6,11 +6,12 @@ public class ForLoop5 {
 
     public static int loopIt(String str, String x, int y) {
         int result = 0;
+
         for (int i = y; i < str.length(); i++) {
-            if (str.substring(i, i + 1).equals(x)) {
+            if (str.substring(i, i + 1).equals(x))
                 result++;
-            }
         }
+
         return result;
     }
 

@@ -6,9 +6,11 @@ public class ForLoop1 {
 
     public static int loopIt(String str) {
         int result = 0;
+
         for (int i = 0; i < str.length(); i++) {
             result += 2;
         }
+
         return result;
     }
 

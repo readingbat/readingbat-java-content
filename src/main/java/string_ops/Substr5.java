@@ -5,8 +5,7 @@ package string_ops;
 public class Substr5 {
 
     public static String slice(String s) {
-        String c = s.substring(2, 5);
-        return c;
+        return s.substring(2, 5);
     }
 
     public static void main(String[] args) {

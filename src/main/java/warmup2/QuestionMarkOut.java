@@ -1,25 +1,28 @@
 package warmup2;
 
 public class QuestionMarkOut {
+
     public static String qMarkOut(String str) {
         String result = "";
         boolean inQuestion = false;
         boolean chopable = true;
-        for (int i = 0; i < str.length(); i++) {
+
+        for (int i = 0; i < str.length(); i++)
             if (str.charAt(i) == '?') {
                 if (!inQuestion && chopable && result.length() > 0) {
                     result = result.substring(0, result.length() - 1);
                     chopable = false;
                 }
                 inQuestion = true;
-            } else {
+            }
+            else {
                 if (!inQuestion) {
                     result += str.charAt(i);
                     chopable = true;
                 }
                 inQuestion = false;
             }
-        }
+
         return result;
     }
 

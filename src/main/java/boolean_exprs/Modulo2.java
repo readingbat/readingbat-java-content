@@ -9,7 +9,6 @@ public class Modulo2 {
         return result == 0;
     }
 
-
     public static void main(String[] args) {
         System.out.println(mod(9));
         System.out.println(mod(13));

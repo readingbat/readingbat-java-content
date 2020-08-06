@@ -3,11 +3,13 @@ package warmup1;
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
 public class IntToString {
+
     public static String[] intToString(int[] numbers) {
         String[] result = new String[numbers.length / 2];
-        for (int i = 0; i < numbers.length / 2; i++) {
+
+        for (int i = 0; i < numbers.length / 2; i++)
             result[i] = "" + numbers[i * 2] + numbers[i * 2 + 1];
-        }
+
         return result;
     }
 

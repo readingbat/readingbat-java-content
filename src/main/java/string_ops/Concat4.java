@@ -6,17 +6,16 @@ public class Concat4 {
         String s3;
         String s4;
 
-        if (s1.length() < 3) {
+        if (s1.length() < 3)
             s3 = s1;
-        } else {
+        else
             s3 = s1.substring(0, 1) + s1.substring(s1.length() - 2, s1.length() - 1);
-        }
 
-        if (s2.length() < 3) {
+        if (s2.length() < 3)
             s4 = s2;
-        } else {
+        else
             s4 = s2.substring(0, 1) + s2.substring(s2.length() - 2, s2.length() - 1);
-        }
+
         return s3 + s4;
     }
 

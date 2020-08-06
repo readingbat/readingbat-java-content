@@ -4,9 +4,10 @@ public class Concat5 {
 
     public static String combine(int t, String s) {
         String result = "";
-        for (int i = 0; i < t; i++) {
+
+        for (int i = 0; i < t; i++)
             result += s;
-        }
+
         return result;
     }
 

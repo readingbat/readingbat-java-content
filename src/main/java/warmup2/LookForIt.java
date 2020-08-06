@@ -5,10 +5,9 @@ public class LookForIt {
     public static boolean lookForIt(String str, String letter) {
         int c = 0;
 
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++)
             if (str.substring(i, i + 1).equals(letter))
                 c++;
-        }
 
         return c >= 2;
     }

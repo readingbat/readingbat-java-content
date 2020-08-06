@@ -6,17 +6,15 @@ public class CheckBoth {
         boolean gt15 = false;
         boolean lt10 = false;
 
-        for (int i = 0; i < vals.length; i++) {
-            if (vals[i] > 15) {
+        for (int i = 0; i < vals.length; i++)
+            if (vals[i] > 15)
                 gt15 = true;
-            }
-        }
 
-        for (int i = 0; i < vals.length; i++) {
-            if (vals[i] < 10) {
+
+        for (int i = 0; i < vals.length; i++)
+            if (vals[i] < 10)
                 lt10 = true;
-            }
-        }
+
 
         return gt15 && lt10;
     }

@@ -4,11 +4,12 @@ public class IfStmt1 {
 
     public static int ifIt(int x) {
         int retval;
-        if (x > 10) {
+
+        if (x > 10)
             retval = x;
-        } else {
+        else
             retval = 3;
-        }
+
         return retval;
     }
 

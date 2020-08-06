@@ -92,6 +92,16 @@ val content =
         challenge("HasEvens")
 
         challenge("HasOdds")
+
+        challenge("FirstLast")
+
+        challenge("UpperLower")
+
+        challenge("Matching")
+
+        includeFiles = "Searching*.java"
+
+        includeFiles = "SearchingBoth*.java"
       }
 
       group("Warmup 2") {
