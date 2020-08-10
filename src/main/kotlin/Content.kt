@@ -100,8 +100,6 @@ val content =
         challenge("Matching")
 
         includeFiles = "Searching*.java"
-
-        includeFiles = "SearchingBoth*.java"
       }
 
       group("Warmup 2") {

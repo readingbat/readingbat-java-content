@@ -1,6 +1,6 @@
 package warmup1;
 
-public class SearchingBoth1 {
+public class Searching3 {
 
     public static boolean search(String a, String b, String c) {
         int len = c.length();
@@ -8,11 +8,11 @@ public class SearchingBoth1 {
         boolean found2 = false;
 
         for (int i = 0; i <= a.length() - len; i++)
-            if (a.substring(i, i + len).equals(c))
+            if (a.contains(c))
                 found1 = true;
 
         for (int i = 0; i <= b.length() - len; i++)
-            if (b.substring(i, i + len).equals(c))
+            if (b.indexOf(c) != -1)
                 found2 = true;
 
         return found1 && found2;

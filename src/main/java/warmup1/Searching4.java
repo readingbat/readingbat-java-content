@@ -2,7 +2,7 @@ package warmup1;
 
 // @desc Notice the lack of curly braces inside the embedded for loop.
 
-public class SearchingBoth2 {
+public class Searching4 {
 
     public static boolean search(String a, String b, String c) {
         int len = c.length();
