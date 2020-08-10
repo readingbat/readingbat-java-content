@@ -100,6 +100,10 @@ val content =
         challenge("Matching")
 
         includeFiles = "Searching*.java"
+
+        challenge("MixString") {
+          codingBatEquiv = "p125185"
+        }
       }
 
       group("Warmup 2") {
