@@ -149,6 +149,14 @@ val content =
         challenge("MapFilter1") {
           returnType = IntListType
         }
+
+        challenge("Chain1") {
+          returnType = StringType
+        }
+
+        challenge("Chain2") {
+          returnType = StringType
+        }
       }
 
       group("Misc Lambdas") {
