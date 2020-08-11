@@ -130,8 +130,17 @@ val content =
         packageName = "transformations"
         description = "Basic collection transformations"
 
-        includeFilesWithType = "Filter*.kt" returns IntType
-        includeFilesWithType = "Map*.kt" returns IntListType
+        challenge("Filter1") {
+          returnType = IntType
+        }
+
+        challenge("Filter2") {
+          returnType = StringListType
+        }
+
+        challenge("Map2") {
+          returnType = IntListType
+        }
       }
 
       group("Misc Lambdas") {
