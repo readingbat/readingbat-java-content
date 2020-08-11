@@ -138,7 +138,15 @@ val content =
           returnType = StringListType
         }
 
+        challenge("Map1") {
+          returnType = IntListType
+        }
+
         challenge("Map2") {
+          returnType = BooleanListType
+        }
+
+        challenge("MapFilter1") {
           returnType = IntListType
         }
       }
