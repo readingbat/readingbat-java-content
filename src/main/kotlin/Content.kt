@@ -130,20 +130,20 @@ val content =
         packageName = "transformations"
         description = "Basic collection transformations"
 
-        challenge("Filter1") {
-          returnType = IntType
-        }
-
-        challenge("Filter2") {
-          returnType = StringListType
-        }
-
         challenge("Map1") {
           returnType = IntListType
         }
 
         challenge("Map2") {
           returnType = BooleanListType
+        }
+
+        challenge("Filter1") {
+          returnType = IntType
+        }
+
+        challenge("Filter2") {
+          returnType = StringListType
         }
 
         challenge("MapFilter1") {
