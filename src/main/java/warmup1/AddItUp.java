@@ -19,5 +19,6 @@ public class AddItUp {
         System.out.println(addItUp(new int[]{0}));
         System.out.println(addItUp(new int[]{2, 2, 2, 2}));
         System.out.println(addItUp(new int[]{1, 1, 1, 1, 1, 1, 1, 1}));
+        System.out.println(addItUp(new int[]{1, 4, 5}));
     }
 }
