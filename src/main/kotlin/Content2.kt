@@ -4,11 +4,7 @@ import com.github.readingbat.dsl.readingBatContent
 
 val content2 =
   readingBatContent {
-    repo =
-        //if (isProduction())
-      GitHubRepo(Organization, "readingbat", "readingbat-java-content")
-    //else
-    //  FileSystemSource("./")
+    repo = GitHubRepo(Organization, "readingbat", "readingbat-java-content")
 
     java {
       group("Boolean Expressions") {
