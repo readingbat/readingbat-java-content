@@ -39,24 +39,46 @@ import io.ktor.server.testing.*
 
 class ContentTests : StringSpec({
 
-  "Test all challenges" {
+  "Test correct answers" {
+    System.gc()
     withTestApplication({ testModule(content) }) {
+      content.forEachLanguage {
+        forEachGroup {
+          forEachChallenge {
+            answerAllWithCorrectAnswer(this@withTestApplication) {
+              answerStatus shouldBe CORRECT
+              hint.shouldBeBlank()
+            }
+          }
+        }
+      }
+    }
+  }
 
+  "Test empty answers" {
+    System.gc()
+    withTestApplication({ testModule(content) }) {
       content.forEachLanguage {
         forEachGroup {
           forEachChallenge {
             answerAllWith(this@withTestApplication, "") {
               answerStatus shouldBe NOT_ANSWERED
-              message.shouldBeBlank()
+              hint.shouldBeBlank()
             }
+          }
+        }
+      }
+    }
+  }
 
+  "Test wrong answers" {
+    System.gc()
+    withTestApplication({ testModule(content) }) {
+      content.forEachLanguage {
+        forEachGroup {
+          forEachChallenge {
             answerAllWith(this@withTestApplication, "wrong answer") {
               answerStatus shouldBe INCORRECT
-            }
-
-            answerAllWithCorrectAnswer(this@withTestApplication) {
-              answerStatus shouldBe CORRECT
-              message.shouldBeBlank()
             }
           }
         }
