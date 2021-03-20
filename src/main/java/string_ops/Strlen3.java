@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc **len()** returns the length of a string.
+// @desc **length()** returns the length of a string.
 
 public class Strlen3 {
 

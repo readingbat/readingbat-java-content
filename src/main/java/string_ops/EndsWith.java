@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc **endswith()** returns True if a string ends with a specified substring.
+// @desc **endsWith()** returns True if a string ends with a specified substring.
 
 public class EndsWith {
 
