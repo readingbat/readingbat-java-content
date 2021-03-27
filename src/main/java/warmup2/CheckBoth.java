@@ -22,7 +22,9 @@ public class CheckBoth {
     public static void main(String[] args) {
         System.out.println(checkBoth(new int[]{16, 4, 5}));
         System.out.println(checkBoth(new int[]{4, 6, 8}));
-        System.out.println(checkBoth(new int[]{5}));
-        System.out.println(checkBoth(new int[]{6}));
+        System.out.println(checkBoth(new int[]{5, 15, 10}));
+        System.out.println(checkBoth(new int[]{6, 5, 9}));
+        System.out.println(checkBoth(new int[]{16, 5, 9}));
+        System.out.println(checkBoth(new int[]{16, 15, 19}));
     }
 }

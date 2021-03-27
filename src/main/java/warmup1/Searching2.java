@@ -5,13 +5,11 @@ public class Searching2 {
     public static boolean search(String a, String b, String c) {
         int len = c.length();
 
-        for (int i = 0; i <= a.length() - len; i++)
-            if (a.contains(c))
-                return true;
+        if (a.contains(c))
+            return true;
 
-        for (int i = 0; i <= b.length() - len; i++)
-            if (b.contains(c))
-                return true;
+        if (b.contains(c))
+            return true;
 
         return false;
     }

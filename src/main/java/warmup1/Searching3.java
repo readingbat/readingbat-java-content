@@ -7,13 +7,11 @@ public class Searching3 {
         boolean found1 = false;
         boolean found2 = false;
 
-        for (int i = 0; i <= a.length() - len; i++)
-            if (a.contains(c))
-                found1 = true;
+        if (a.contains(c))
+            found1 = true;
 
-        for (int i = 0; i <= b.length() - len; i++)
-            if (b.indexOf(c) != -1)
-                found2 = true;
+        if (b.indexOf(c) != -1)
+            found2 = true;
 
         return found1 && found2;
     }
