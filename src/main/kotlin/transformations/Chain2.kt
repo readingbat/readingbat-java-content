@@ -2,7 +2,7 @@ package transformations
 
 fun chain2(s: String): String {
   return s.asSequence()
-    .map { it.toUpperCase().toString() + it.toLowerCase().toString() }
+    .map { it.uppercase() + it.lowercase() }
     .filter { "a" in it }
     .joinToString("-")
 }

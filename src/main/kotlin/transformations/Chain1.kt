@@ -2,9 +2,9 @@ package transformations
 
 fun chain1(s: String): String {
   return s.asSequence()
-    .map { it.toUpperCase() }
-    .filter { it in ('A'..'F') }
-    .map { it.toLowerCase() }
+    .map { it.uppercase() }
+    .filter { it in ("A".."F") }
+    .map { it.lowercase() }
     .joinToString(", ")
 }
 

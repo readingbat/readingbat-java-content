@@ -1,12 +1,12 @@
 package intro
 
-val upperIt2: (String) -> String = { s: String -> s.toUpperCase() + s.toUpperCase() }
+val upperIt2: (String) -> String = { s: String -> s.uppercase() + s.uppercase() }
 
 // Simplify things with it
-val upperIt3: (String) -> String = { it.toUpperCase() + it.toUpperCase() + it.toUpperCase() }
+val upperIt3: (String) -> String = { it.uppercase() + it.uppercase() + it.uppercase() }
 
 fun upperIt3(s: String): String {
-  return s.toUpperCase() + s.toUpperCase()
+  return s.uppercase() + s.uppercase()
 }
 
 // Higher-order function as a parameter

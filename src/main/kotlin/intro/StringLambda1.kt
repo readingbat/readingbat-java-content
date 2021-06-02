@@ -1,7 +1,7 @@
 package intro
 
 fun upperIt1(s: String): String {
-  return s.toUpperCase() + s.toUpperCase()
+  return s.uppercase() + s.uppercase()
 }
 
 fun func1(s: String): String {
