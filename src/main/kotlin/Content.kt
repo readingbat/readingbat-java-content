@@ -176,6 +176,7 @@ val content =
                 packageName = "Strings"
                 description = "Strings"
                 includeFilesWithType = "String*.kt" returns StringType
+                includeFilesWithType = "FuncSum*.kt" returns IntType
 
                 challenge("LambdaReturn1") {
                     returnType = StringType
