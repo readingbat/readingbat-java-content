@@ -1,22 +1,14 @@
 package intro
 
 // Higher-order function as a return type
-fun funcGena(i: Int): (Int) -> Int {
-  return { j: Int -> j * i }
-}
+fun funcGena(i: Int): (Int) -> Int = { j: Int -> j * i }
 
 // Higher-order function as a return type
-fun funcGenb(i: Int): (Int) -> Int {
-  return { it * i }
-}
+fun funcGenb(i: Int): (Int) -> Int = { it * i }
 
-fun funcWithInvoke(i: Int, j: Int): Int {
-  return funcGena(i).invoke(j)
-}
+fun funcWithInvoke(i: Int, j: Int): Int = funcGena(i).invoke(j)
 
-fun funcNoInvoke(i: Int, j: Int): Int {
-  return funcGenb(i)(j)
-}
+fun funcNoInvoke(i: Int, j: Int): Int = funcGenb(i)(j)
 
 fun main() {
   println(funcWithInvoke(5, 6))

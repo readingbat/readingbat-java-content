@@ -1,11 +1,10 @@
 package transformations
 
-fun chain2(s: String): String {
-  return s.asSequence()
+fun chain2(s: String): String =
+  s.asSequence()
     .map { it.uppercase() + it.lowercase() }
     .filter { "a" in it }
     .joinToString("-")
-}
 
 fun main() {
   println(chain2("A BIKE"))

@@ -10,11 +10,10 @@ fun filterMap2Long(mapFunc: (Int) -> Int, filterFunc: (Int) -> Boolean): List<In
   return list
 }
 
-fun filterMap2Short(mapFunc: (Int) -> Int, filterFunc: (Int) -> Boolean): List<Int> {
-  return listOf(0, 1, 2, 3, 4)
+fun filterMap2Short(mapFunc: (Int) -> Int, filterFunc: (Int) -> Boolean): List<Int> =
+  listOf(0, 1, 2, 3, 4)
     .map(mapFunc)
     .filter(filterFunc)
-}
 
 fun main() {
   println(filterMap2Long({ it * 2 }, { it > 3 }))

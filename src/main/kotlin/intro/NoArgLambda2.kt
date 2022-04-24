@@ -2,9 +2,7 @@ package intro
 
 val constVal: () -> Int = { 4 }
 
-fun funcNoArg2(i: Int): Int {
-  return i * constVal.invoke()
-}
+fun funcNoArg2(i: Int): Int = i * constVal.invoke()
 
 fun main() {
   println(funcNoArg2(5))

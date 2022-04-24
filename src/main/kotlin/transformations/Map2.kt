@@ -13,9 +13,7 @@ fun mapIt2Long(i: Int, func: (Int) -> Boolean): List<Boolean> {
   return list
 }
 
-fun mapIt2Short(i: Int, func: (Int) -> Boolean): List<Boolean> {
-  return (0..i).toList().map(func)
-}
+fun mapIt2Short(i: Int, func: (Int) -> Boolean): List<Boolean> = (0..i).toList().map(func)
 
 fun main() {
   println(mapIt2Long(4, isInRange1))

@@ -13,9 +13,7 @@ fun filterIt2Long(vals: List<String>, func: (String) -> Boolean): List<String> {
   return list
 }
 
-fun filterIt2Short(vals: List<String>, func: (String) -> Boolean): List<String> {
-  return vals.filter(func)
-}
+fun filterIt2Short(vals: List<String>, func: (String) -> Boolean): List<String> = vals.filter(func)
 
 fun main() {
   println(filterIt2Long(listOf("hi", "HA"), inRange1))

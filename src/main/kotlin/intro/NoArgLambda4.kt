@@ -5,13 +5,9 @@ fun funcGen1(i: Int): () -> Int {
   return { i }
 }
 
-fun funcNoArg4a(i: Int, j: Int): Int {
-  return i * funcGen1(j).invoke()
-}
+fun funcNoArg4a(i: Int, j: Int): Int = i * funcGen1(j).invoke()
 
-fun funcNoArg4b(i: Int, j: Int): Int {
-  return i * funcGen1(j)()
-}
+fun funcNoArg4b(i: Int, j: Int): Int = i * funcGen1(j)()
 
 fun main() {
   println(funcNoArg4a(5, 10))

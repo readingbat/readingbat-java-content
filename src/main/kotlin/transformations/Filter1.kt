@@ -4,18 +4,15 @@ val isEven: (Int) -> Boolean = { i: Int -> i % 2 == 0 }
 
 val isOdd: (Int) -> Boolean = { it % 2 == 1 }
 
-fun filterIt1Long(i: Int, func: (Int) -> Boolean): List<Int> {
-  val list = mutableListOf<Int>()
-  for (v in (0..i).toList()) {   // (0..i) is inclusive
-    if (func.invoke(v))
-      list.add(v)
+fun filterIt1Long(i: Int, func: (Int) -> Boolean): List<Int> =
+  buildList {
+    for (v in (0..i).toList()) {   // (0..i) is inclusive
+      if (func.invoke(v))
+        add(v)
+    }
   }
-  return list
-}
 
-fun filterIt1Short(i: Int, func: (Int) -> Boolean): List<Int> {
-  return (0..i).toList().filter(func)
-}
+fun filterIt1Short(i: Int, func: (Int) -> Boolean): List<Int> = (0..i).toList().filter(func)
 
 fun main() {
   println(filterIt1Long(8, isEven))

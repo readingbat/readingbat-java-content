@@ -1,12 +1,8 @@
 package intro
 
-fun doubleIt1(i: Int): Int {
-  return i * 2
-}
+fun doubleIt1(i: Int): Int = i * 2
 
-fun func1(i: Int): Int {
-  return doubleIt1(i)
-}
+fun func1(i: Int): Int = doubleIt1(i)
 
 fun main() {
   println(func1(5))

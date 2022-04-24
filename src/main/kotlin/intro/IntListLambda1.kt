@@ -4,16 +4,14 @@ val tripleIt4: (Int) -> Int = { i: Int -> i * 3 }
 
 val quadIt4: (Int) -> Int = { i: Int -> i * 4 }
 
-fun doubleIt4(i: Int): Int {
-  return i * 2
-}
+fun doubleIt4(i: Int): Int = i * 2
 
-fun func4(i: Int, funcs: List<(Int) -> Int>): List<Int> {
-  val list = mutableListOf<Int>()
-  for (func: (Int) -> Int in funcs)
-    list.add(func.invoke((i)))
-  return list
-}
+fun func4(i: Int, funcs: List<(Int) -> Int>): List<Int> =
+  buildList {
+    funcs.forEach { func: (Int) -> Int ->
+      add(func((i)))
+    }
+  }
 
 fun main() {
   println(func4(4, listOf(tripleIt4)))

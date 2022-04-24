@@ -13,9 +13,7 @@ fun mapIt1Long(i: Int, func: (Int) -> Int): List<Int> {
   return list
 }
 
-fun mapIt1Short(i: Int, func: (Int) -> Int): List<Int> {
-  return (0..i).toList().map(func)
-}
+fun mapIt1Short(i: Int, func: (Int) -> Int): List<Int> = (0..i).toList().map(func)
 
 fun main() {
   println(mapIt1Long(6, doubleIt))
