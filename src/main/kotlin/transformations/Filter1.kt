@@ -6,13 +6,13 @@ val isOdd: (Int) -> Boolean = { it % 2 == 1 }
 
 fun filterIt1Long(i: Int, func: (Int) -> Boolean): List<Int> =
   buildList {
-    for (v in (0..i).toList()) {   // (0..i) is inclusive
+    for (v in (0..i)) {   // (0..i) is inclusive
       if (func.invoke(v))
         add(v)
     }
   }
 
-fun filterIt1Short(i: Int, func: (Int) -> Boolean): List<Int> = (0..i).toList().filter(func)
+fun filterIt1Short(i: Int, func: (Int) -> Boolean): List<Int> = (0..i).filter(func)
 
 fun main() {
   println(filterIt1Long(8, isEven))

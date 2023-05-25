@@ -6,14 +6,14 @@ val tripleIt: (Int) -> Int = { it * 3 }
 
 fun mapIt1Long(i: Int, func: (Int) -> Int): List<Int> {
   val list = mutableListOf<Int>()
-  for (v in (0..i).toList()) {   // (0..i) is inclusive
+  for (v in (0..i)) {   // (0..i) is inclusive
     val w = func.invoke(v)
     list.add(w)
   }
   return list
 }
 
-fun mapIt1Short(i: Int, func: (Int) -> Int): List<Int> = (0..i).toList().map(func)
+fun mapIt1Short(i: Int, func: (Int) -> Int): List<Int> = (0..i).map(func)
 
 fun main() {
   println(mapIt1Long(6, doubleIt))

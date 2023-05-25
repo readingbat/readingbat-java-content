@@ -6,14 +6,14 @@ val isInRange2: (Int) -> Boolean = { it < 2 || it > 5 }
 
 fun mapIt2Long(i: Int, func: (Int) -> Boolean): List<Boolean> {
   val list = mutableListOf<Boolean>()
-  for (v in (0..i).toList()) {   // (0..i) is inclusive
+  for (v in (0..i)) {   // (0..i) is inclusive
     val w = func.invoke(v)
     list.add(w)
   }
   return list
 }
 
-fun mapIt2Short(i: Int, func: (Int) -> Boolean): List<Boolean> = (0..i).toList().map(func)
+fun mapIt2Short(i: Int, func: (Int) -> Boolean): List<Boolean> = (0..i).map(func)
 
 fun main() {
   println(mapIt2Long(4, isInRange1))
