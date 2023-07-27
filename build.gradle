@@ -1,17 +1,14 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
-    id "com.github.ben-manes.versions" version "0.46.0"
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id "com.github.ben-manes.versions" version "0.47.0"
 }
 
 // This is for ./gradlew run
 application {
     mainClassName = "ContentServer"
 }
-
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 
 group 'com.github.readingbat'
 version '1.0-SNAPSHOT'
@@ -28,6 +25,10 @@ dependencies {
     implementation "io.github.microutils:kotlin-logging:$logging_version"
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 test {
     useJUnitPlatform()
 
@@ -36,8 +37,4 @@ test {
         exceptionFormat "full"
         showStandardStreams = true
     }
-}
-
-kotlin {
-    jvmToolchain(17)
 }
