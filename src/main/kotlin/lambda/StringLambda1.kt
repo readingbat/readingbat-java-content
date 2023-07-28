@@ -1,4 +1,4 @@
-package lambda1
+package lambda
 
 fun List<String>.combine(): String = mapIndexed { i, s -> i.toString() + s }.joinToString(", ")
 

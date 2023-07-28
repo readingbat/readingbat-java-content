@@ -20,7 +20,7 @@ fun main() {
   println(filterIt2Long(listOf("PAT", "at"), inRange2))
   println(filterIt2Short(listOf("hi", "HA"), inRange1))
   println(filterIt2Short(listOf("BAT", "HA"), inRange2))
-  println(filterIt2Short(listOf("BAT", "HA"), { s: String -> s.uppercase().endsWith("AT") }))
-  println(filterIt2Short(listOf("BAT", "HA"), { it.lowercase().contains("a") }))
-  println(filterIt2Short(listOf("BAT", "HA"), { it.capitalize().startsWith("B") }))
+  println(filterIt2Short(listOf("BAT", "HA")) { s: String -> s.uppercase().endsWith("AT") })
+  println(filterIt2Short(listOf("BAT", "HA")) { it.lowercase().contains("a") })
+  println(filterIt2Short(listOf("BAT", "HA")) { it.capitalize().startsWith("B") })
 }

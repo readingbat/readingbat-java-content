@@ -20,8 +20,8 @@ fun main() {
   println(mapIt1Long(6, tripleIt))
   println(mapIt1Short(6, doubleIt))
   println(mapIt1Short(6, tripleIt))
-  println(mapIt1Short(4, { i: Int -> i * 4 }))
-  println(mapIt1Short(4, { i: Int -> i * 5 }))
-  println(mapIt1Short(4, { it * 7 }))
-  println(mapIt1Short(4, { it * 8 }))
+  println(mapIt1Short(4) { i: Int -> i * 4 })
+  println(mapIt1Short(4) { i: Int -> i * 5 })
+  println(mapIt1Short(4) { it * 7 })
+  println(mapIt1Short(4) { it * 8 })
 }

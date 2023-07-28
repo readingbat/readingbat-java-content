@@ -19,8 +19,8 @@ fun main() {
   println(filterIt1Long(8, isOdd))
   println(filterIt1Short(6, isEven))
   println(filterIt1Short(6, isOdd))
-  println(filterIt1Short(4, { i: Int -> i % 2 == 0 }))
-  println(filterIt1Short(4, { i: Int -> i % 2 != 0 }))
-  println(filterIt1Short(4, { it % 2 == 0 }))
-  println(filterIt1Short(4, { it % 2 != 0 }))
+  println(filterIt1Short(4) { i: Int -> i % 2 == 0 })
+  println(filterIt1Short(4) { i: Int -> i % 2 != 0 })
+  println(filterIt1Short(4) { it % 2 == 0 })
+  println(filterIt1Short(4) { it % 2 != 0 })
 }

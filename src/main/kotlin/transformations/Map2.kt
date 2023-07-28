@@ -1,6 +1,6 @@
 package transformations
 
-val isInRange1: (Int) -> Boolean = { i: Int -> i >= 3 && i <= 6 }
+val isInRange1: (Int) -> Boolean = { i: Int -> i in 3..6 }
 
 val isInRange2: (Int) -> Boolean = { it < 2 || it > 5 }
 
@@ -20,8 +20,8 @@ fun main() {
   println(mapIt2Long(4, isInRange2))
   println(mapIt2Short(2, isInRange1))
   println(mapIt2Short(2, isInRange2))
-  println(mapIt2Short(4, { i: Int -> i > 4 }))
-  println(mapIt2Short(4, { i: Int -> i < 5 }))
-  println(mapIt2Short(4, { it == 5 }))
-  println(mapIt2Short(4, { it == 4 }))
+  println(mapIt2Short(4) { i: Int -> i > 4 })
+  println(mapIt2Short(4) { i: Int -> i < 5 })
+  println(mapIt2Short(4) { it == 5 })
+  println(mapIt2Short(4) { it == 4 })
 }

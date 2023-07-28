@@ -160,7 +160,7 @@ val content =
             }
 
             group("Misc Lambdas") {
-                packageName = "lambda1"
+                packageName = "lambda"
                 description = "Miscellaneous Lambdas"
 
                 challenge("StringLambda1") {
