@@ -175,6 +175,7 @@ val content =
             group("Strings") {
                 packageName = "strings"
                 description = "Strings"
+
                 includeFilesWithType = "String*.kt" returns StringType
                 includeFilesWithType = "FuncSum*.kt" returns IntType
 
