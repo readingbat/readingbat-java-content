@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.2.0"
+versions = "0.52.0"
+logging = "7.0.3"
+readingbat = "2.1.1-SNAPSHOT"
+utils = "2.3.11"
+
+[libraries]
+readingbat-core = { module = "com.github.readingbat.readingbat-core:readingbat-core", version.ref = "readingbat" }
+core-utils = { group = "com.github.pambrose.common-utils", name = "core-utils", version.ref = "utils" }
+kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "logging" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
