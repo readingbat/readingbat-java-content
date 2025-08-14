@@ -21,8 +21,13 @@ repositories {
 
 dependencies {
   implementation(libs.readingbat.core)
-  implementation(libs.core.utils)
+  implementation(libs.common.utils.core)
   implementation(libs.kotlin.logging)
+
+  testImplementation(libs.readingbat.core)
+  testImplementation(libs.kotest.runner)
+  testImplementation(libs.kotest.assertions)
+  testImplementation(libs.ktor.server.test)
 }
 
 kotlin {
@@ -37,4 +42,12 @@ tasks.test {
     exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
     showStandardStreams = true
   }
+}
+
+tasks.withType<Tar> {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType<Zip> {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
