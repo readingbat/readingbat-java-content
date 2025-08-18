@@ -1,3 +1,5 @@
+import jdk.tools.jlink.resources.plugins
+
 plugins {
   java
   application
@@ -10,7 +12,7 @@ application {
   mainClass.set("ContentServer")
 }
 
-group = "com.github.readingbat"
+group = "com.github.pambrose.readingbat"
 version = "1.0"
 
 repositories {
