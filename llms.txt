@@ -1,0 +1,23 @@
+# ReadingBat Java Content
+
+> A content repository defining Java and Kotlin programming challenges for the ReadingBat platform.
+
+This repository provides interactive coding challenges served by [readingbat-core](https://github.com/readingbat/readingbat-core). It is not a standalone application — it defines challenge content using a Kotlin DSL.
+
+## Structure
+
+- `src/main/kotlin/Content.kt`: Central DSL file declaring all challenges by language, group, and package
+- `src/main/kotlin/ContentServer.kt`: Server entry point (delegates to readingbat-core)
+- `src/main/java/<package>/*.java`: Java challenge files (each a class with a static method and main())
+- `src/main/kotlin/<package>/*.kt`: Kotlin challenge files (top-level functions with main())
+- `src/test/kotlin/ContentTests.kt`: Kotest tests validating all challenges via Ktor test server
+
+## Challenge Convention
+
+Each challenge is a standalone source file. The `main()` function prints expected outputs which become the answer key. Java challenges use a `@desc` comment for descriptions.
+
+## Tech Stack
+
+- Kotlin/JVM 17, Gradle (Kotlin DSL)
+- readingbat-core (platform library, from JitPack)
+- Kotest + Ktor test host (testing)
