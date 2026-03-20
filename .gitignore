@@ -7,12 +7,12 @@ out
 *.iml
 bin
 
+.kotlin
 .classpath
 .settings
 .project
 .kotlin
 .DS_Store
-
 
 # Compiled class file
 *.class
