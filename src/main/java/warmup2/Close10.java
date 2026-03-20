@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Returns the number that is closest to 10
+
 public class Close10 {
     public static int close10(int a, int b) {
         if (Math.abs(10 - a) > Math.abs(10 - b))

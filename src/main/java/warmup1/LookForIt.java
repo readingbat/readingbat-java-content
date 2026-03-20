@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Checks if a string contains at least two occurrences of the character 'a'
+
 public class LookForIt {
 
     public static boolean lookForIt(String str) {

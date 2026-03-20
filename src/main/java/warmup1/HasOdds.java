@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Checks if each element in an array is odd and returns a string array indicating the result
+
 public class HasOdds {
 
     public static String[] hasOdds(int[] vals) {

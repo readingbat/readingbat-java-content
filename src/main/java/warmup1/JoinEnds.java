@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc This is a *description* of **JoinEnds**
+// @desc Given a string, return a new string made of the first and last characters of the original string, so "Hello" yields "Ho". If the string is length 1, return that string twice. If the string is empty, return an empty string.
 
 public class JoinEnds {
 

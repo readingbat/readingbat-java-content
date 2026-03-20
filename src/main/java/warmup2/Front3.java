@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Returns the first 3 characters of a string repeated 3 times
+
 public class Front3 {
 
     public static String front3(String str) {

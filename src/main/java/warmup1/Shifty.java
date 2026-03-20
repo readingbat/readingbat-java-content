@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Takes an array of integers and shifts each element to the left by one position. The first element of the array is moved to the end of the array.
+
 public class Shifty {
 
     public static int[] shifty(int[] vals) {

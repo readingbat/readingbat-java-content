@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Checks if a string is contained in another string
+
 public class Searching1 {
 
     public static boolean search(String a, String b, String c) {

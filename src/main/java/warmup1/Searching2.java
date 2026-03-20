@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Notice the use of the contains method.
+
 public class Searching2 {
 
     public static boolean search(String a, String b, String c) {

@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Returns true if the letter appears at least twice in a string
+
 public class LookForIt {
 
     public static boolean lookForIt(String str, String letter) {

@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Takes an array of integers and converts pairs of integers into strings, concatenating them together. The resulting array contains the concatenated string representations of each pair of integers.
+
 public class IntToString {
 
     public static String[] intToString(int[] numbers) {

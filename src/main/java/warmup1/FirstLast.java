@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Returns the first and last characters of a string
+
 public class FirstLast {
 
     public static String firstLast(String a, String b) {
@@ -13,7 +15,7 @@ public class FirstLast {
         else
             aChar = a.substring(a.length() - 1);
 
-        if (b.length() == 0)
+        if (b.isEmpty())
             bChar = "$";
         else
             bChar = b.substring(0, 1);

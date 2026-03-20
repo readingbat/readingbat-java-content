@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Returns a string with the first letter of each word capitalized
+
 public class UpperLower {
 
     public static String upperLower(String a) {

@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Removes all question marks from a string
+
 public class QuestionMarkOut {
 
     public static String qMarkOut(String str) {

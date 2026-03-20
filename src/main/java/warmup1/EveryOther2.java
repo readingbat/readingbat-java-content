@@ -1,15 +1,17 @@
 package warmup1;
 
+// @desc Adds the sum of every other number in an array, starting with the first one
+
 public class EveryOther2 {
 
     public static int everyOther2(int[] numbers) {
-        int count = 0;
+        int sum = 0;
 
         for (int i = 0; i < numbers.length; i++)
             if (i % 2 == 0)
-                count += numbers[i];
+                sum += numbers[i];
 
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {

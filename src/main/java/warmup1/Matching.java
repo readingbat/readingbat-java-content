@@ -1,5 +1,7 @@
 package warmup1;
 
+// desc Given a string, return true if the first 3 chars in the string also appear at the end of the string, such as with "edited".
+
 public class Matching {
 
     public static boolean matching(String a) {
@@ -14,6 +16,7 @@ public class Matching {
         System.out.println(matching("World"));
         System.out.println(matching("Hi"));
         System.out.println(matching(""));
+        System.out.println(matching("edited"));
         System.out.println(matching("????????"));
     }
 }

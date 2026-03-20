@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Checks if both values in an array are greater than 15 and less than 10
+
 public class CheckBoth {
 
     public static boolean checkBoth(int[] vals) {

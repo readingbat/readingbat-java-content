@@ -1,14 +1,16 @@
 package warmup1;
 
+// @desc Adds the sum of the numbers in an array, but backwards (starting from the end of the array)
+
 public class Backwards {
 
     public static int backwards(int[] numbers) {
-        int count = 0;
+        int sum = 0;
 
         for (int i = numbers.length - 1; i > 0; i--)
-            count += numbers[i];
+            sum += numbers[i];
 
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {

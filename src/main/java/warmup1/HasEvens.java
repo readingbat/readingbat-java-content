@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Checks if each element in an array is even and returns a boolean array indicating the result
+
 public class HasEvens {
 
     public static boolean[] hasEvens(int[] vals) {
