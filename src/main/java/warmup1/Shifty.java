@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Follow each array element as it moves to its new position in the result.
+
 public class Shifty {
 
     public static int[] shifty(int[] vals) {

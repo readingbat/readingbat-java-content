@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc The loop checks each character and decides whether to include it in the result.
+
 public class QuestionMarkOut {
 
     public static String qMarkOut(String str) {

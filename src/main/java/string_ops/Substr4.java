@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc A slice is inclusive of the starting index and exclusive of the ending index.
+// @desc **substring(0, 2)** grabs the first two characters — index 0 and index 1. Remember the end index is exclusive.
 
 public class Substr4 {
 

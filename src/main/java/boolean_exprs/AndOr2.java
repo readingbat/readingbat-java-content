@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Truth tables
+// @desc The **||** operator returns **true** when *at least one* value is **true**.
 
 public class AndOr2 {
 

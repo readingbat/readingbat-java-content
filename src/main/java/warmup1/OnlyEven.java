@@ -1,15 +1,17 @@
 package warmup1;
 
+// @desc The **if** test skips some elements — only certain ones get added to the total.
+
 public class OnlyEven {
 
     public static int onlyEven(int[] numbers) {
-        int count = 0;
+        int sum = 0;
 
         for (int i = 0; i < numbers.length; i++)
             if (numbers[i] % 2 == 0)
-                count += numbers[i];
+                sum += numbers[i];
 
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {

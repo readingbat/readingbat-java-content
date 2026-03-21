@@ -1,14 +1,16 @@
 package warmup1;
 
+// @desc The loop starts at the end of the array and works backward — trace which indices are visited.
+
 public class Backwards {
 
     public static int backwards(int[] numbers) {
-        int count = 0;
+        int sum = 0;
 
-        for (int i = numbers.length; i > 0; i--)
-            count += numbers[i];
+        for (int i = numbers.length - 1; i > 0; i--)
+            sum += numbers[i];
 
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {

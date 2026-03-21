@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc Casting with **(int)** truncates values. **int(5/2)** equals 2
+// @desc Integer division in Java truncates — **5 / 2** equals **2**, not 2.5.
 
 public class Split {
 

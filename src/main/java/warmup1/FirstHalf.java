@@ -1,17 +1,19 @@
 package warmup1;
 
+// @desc The loop breaks when it reaches the halfway point — trace where that cutoff falls.
+
 public class FirstHalf {
 
     public static int firstHalf(int[] numbers) {
-        int count = 0;
+        int sum = 0;
 
         for (int i = 0; i < numbers.length; i++) {
             if (i == numbers.length / 2)
                 break;
-            count += numbers[i];
+            sum += numbers[i];
         }
 
-        return count;
+        return sum;
     }
 
     public static void main(String[] args) {

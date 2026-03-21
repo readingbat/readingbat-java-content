@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc **indexOf()** returns the position of a match, or **-1** if not found.
+
 public class Searching1 {
 
     public static boolean search(String a, String b, String c) {

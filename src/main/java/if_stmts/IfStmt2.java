@@ -1,5 +1,7 @@
 package if_stmts;
 
+// @desc When the **if** condition is **false**, the **else** block runs instead.
+
 public class IfStmt2 {
 
     public static int ifIt(int x) {

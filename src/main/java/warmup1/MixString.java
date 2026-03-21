@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc This is a *description* of **MixString**
+// @desc The loop alternates between the two strings — track what happens when one string is longer.
 
 public class MixString {
 

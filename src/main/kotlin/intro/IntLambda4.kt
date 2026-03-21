@@ -1,4 +1,5 @@
 package intro
+// @desc The function returns *another function* — first figure out what the returned function does, then apply it.
 
 // Higher-order function as a return type
 fun funcGena(i: Int): (Int) -> Int = { j: Int -> j * i }

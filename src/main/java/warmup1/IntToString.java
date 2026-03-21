@@ -2,6 +2,8 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
+// @desc Watch how pairs of numbers are combined into strings using concatenation.
+
 public class IntToString {
 
     public static String[] intToString(int[] numbers) {

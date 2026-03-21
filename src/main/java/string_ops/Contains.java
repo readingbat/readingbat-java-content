@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc The **.contains()** method returns True if the specified substring is found in a string.
+// @desc **contains()** returns **true** if the substring appears *anywhere* within the string.
 
 public class Contains {
 

@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Think about what happens when **indexOf()** returns different values for each string.
+
 public class Searching3 {
 
     public static boolean search(String a, String b, String c) {

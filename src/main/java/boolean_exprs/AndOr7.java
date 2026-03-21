@@ -1,5 +1,7 @@
 package boolean_exprs;
 
+// @desc The **||** operator returns **true** if *any* of the values is **true**.
+
 public class AndOr7 {
 
     public static boolean compare(boolean val1, boolean val2, boolean val3) {

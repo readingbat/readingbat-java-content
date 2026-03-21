@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc **contains()** returns **true** if the substring appears anywhere in the string.
+
 public class Searching2 {
 
     public static boolean search(String a, String b, String c) {

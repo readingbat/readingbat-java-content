@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc The **not** operator flips a boolean value.
+// @desc The **!** operator flips a boolean value — apply it to each value *before* combining with **&&**.
 
 public class AndOr3 {
 

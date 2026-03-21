@@ -1,5 +1,7 @@
 package if_stmts;
 
+// @desc Trace through each condition from top to bottom — once one is **true**, the remaining conditions are ignored.
+
 public class IfStmt4 {
 
     public static int ifIt(boolean x, int y, int z) {

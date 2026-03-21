@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Determine if one value is less than another with the **<** operator.
+// @desc The **<** operator returns **true** when the left value is strictly smaller than the right.
 
 public class LessThan {
 

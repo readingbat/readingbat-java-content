@@ -1,5 +1,7 @@
 package string_ops;
 
+// @desc When a string is short, it's used as-is — otherwise **substring()** picks specific characters to combine.
+
 public class Concat4 {
 
     public static String combine(String s1, String s2) {

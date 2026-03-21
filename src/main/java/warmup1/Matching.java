@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Compare the first few characters with the last few — **substring()** can extract both ends.
+
 public class Matching {
 
     public static boolean matching(String a) {
@@ -14,6 +16,7 @@ public class Matching {
         System.out.println(matching("World"));
         System.out.println(matching("Hi"));
         System.out.println(matching(""));
+        System.out.println(matching("edited"));
         System.out.println(matching("????????"));
     }
 }

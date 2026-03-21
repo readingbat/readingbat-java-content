@@ -1,5 +1,6 @@
-// @desc Determine if two value are not equal with the **!=** operator.
 package boolean_exprs;
+
+// @desc The **!=** operator returns **true** when two values are *different*.
 
 public class NotEqual {
 

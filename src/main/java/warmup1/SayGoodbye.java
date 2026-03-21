@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Notice how the **+** operator joins strings together with other text.
+
 public class SayGoodbye {
 
     public static String sayGoodBye(String name) {

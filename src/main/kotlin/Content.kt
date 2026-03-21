@@ -76,13 +76,13 @@ val content =
                 challenge("SayGoodbye")
 
                 challenge("JoinEnds") {
-                    codingBatEquiv = "p141494"
+                    codingBatEquiv = "p163411"
                 }
 
                 challenge("AddItUp")
 
                 challenge("StringLength") {
-                    codingBatEquiv = "p141494"
+                    codingBatEquiv = "p172267"
                 }
 
                 challenge("LookForIt")

@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc The loop scans for matches and skips over them — trace what ends up in the result string.
+
 public class Remover {
 
     public static String takeOut(String a, String b) {

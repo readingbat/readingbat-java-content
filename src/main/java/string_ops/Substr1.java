@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc The first character in a string is at index 0.
+// @desc **substring(start, end)** extracts characters starting at index **start** up to but *not including* index **end**.
 
 public class Substr1 {
 

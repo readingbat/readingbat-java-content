@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Determine if one value is greater than another with the **>** operator.
+// @desc The **>** operator returns **true** when the left value is strictly larger than the right.
 
 public class GreaterThan {
 

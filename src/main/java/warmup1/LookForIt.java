@@ -1,5 +1,7 @@
 package warmup1;
 
+// @desc Track the counter as the loop scans each character — what value triggers a **true** result?
+
 public class LookForIt {
 
     public static boolean lookForIt(String str) {

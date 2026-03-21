@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc **length()** returns the length of a string.
+// @desc Compute the **length()** of each string separately, then apply the multipliers before adding the results together.
 
 public class Strlen3 {
 

@@ -1,4 +1,5 @@
 package transformations
+// @desc First **map** transforms each value, then **filter** keeps only those that pass the test — do both steps in order.
 
 fun filterMap2Long(mapFunc: (Int) -> Int, filterFunc: (Int) -> Boolean): List<Int> {
   val list = mutableListOf<Int>()

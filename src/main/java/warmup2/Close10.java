@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc **Math.abs()** gives the distance between two numbers — compare the distances.
+
 public class Close10 {
     public static int close10(int a, int b) {
         if (Math.abs(10 - a) > Math.abs(10 - b))

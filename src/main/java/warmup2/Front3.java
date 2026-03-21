@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Think about what **substring()** returns when the string is shorter than the requested length.
+
 public class Front3 {
 
     public static String front3(String str) {

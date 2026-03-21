@@ -1,4 +1,5 @@
 package intro
+// @desc Follow the chain of function calls — what value does each function return to its caller?
 
 fun constVal(): Int {
   return 5

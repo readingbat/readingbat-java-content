@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc The 2nd character in a string is at index 1.
+// @desc Break down the expression step by step — find what each **substring()** returns, then join them with **+**.
 
 public class Concat3 {
 

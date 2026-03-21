@@ -1,5 +1,7 @@
 package warmup2;
 
+// @desc Track how many times the target character appears as you scan through the string.
+
 public class LookForIt {
 
     public static boolean lookForIt(String str, String letter) {

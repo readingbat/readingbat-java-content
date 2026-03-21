@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Which order are the **and** and the **or** evaluated?
+// @desc **&&** has higher precedence than **||**, so the **&&** part is evaluated first.
 
 public class AndOr5 {
 

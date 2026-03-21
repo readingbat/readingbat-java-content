@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc This is a *description* of **JoinEnds**
+// @desc Think about what **substring()** returns when you use **length()** in the index calculations.
 
 public class JoinEnds {
 

@@ -1,4 +1,5 @@
 package intro
+// @desc **uppercase()** converts all characters to capitals — think about what happens when you join two copies.
 
 fun upperIt1(s: String): String = s.uppercase() + s.uppercase()
 

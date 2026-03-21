@@ -1,5 +1,7 @@
 package string_ops;
 
+// @desc String concatenation with **+** joins strings in left-to-right order.
+
 public class Concat2 {
 
     public static String combine(String s1, String s2, String s3) {

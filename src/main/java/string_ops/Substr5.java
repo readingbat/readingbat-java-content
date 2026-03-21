@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc A slice is inclusive of the starting index and exclusive of the ending index.
+// @desc **substring(2, 5)** extracts characters at indices 2, 3, and 4. Count carefully from index 0 to find the right letters.
 
 public class Substr5 {
 

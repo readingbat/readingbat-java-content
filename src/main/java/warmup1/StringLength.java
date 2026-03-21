@@ -1,18 +1,20 @@
 package warmup1;
 
+// @desc The loop checks each character one at a time — count how many match the condition.
+
 public class StringLength {
 
     public static int examine(String str) {
-        int c = 0;
+        int count = 0;
 
         if (str.length() < 2)
             return -1;
 
         for (int i = 0; i < str.length(); i++)
             if (str.substring(i, i + 1).equals("a"))
-                c++;
+                count++;
 
-        return c;
+        return count;
     }
 
     public static void main(String[] args) {

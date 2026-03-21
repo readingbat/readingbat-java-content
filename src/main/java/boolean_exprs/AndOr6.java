@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Parentheses override the order of evaluation.
+// @desc Evaluate each **&&** pair first, then combine those results with **||**.
 
 public class AndOr6 {
 

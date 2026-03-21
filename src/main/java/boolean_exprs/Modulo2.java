@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc **%2** is an easy way of testing if a number is odd or even.
+// @desc A number is evenly divisible when the remainder (**%**) is zero.
 
 public class Modulo2 {
 
