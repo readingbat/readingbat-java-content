@@ -1,4 +1,5 @@
 package intro
+
 // @desc The function applies each lambda in the list to the *same* input value and collects the results.
 
 val tripleIt4: (Int) -> Int = { i: Int -> i * 3 }

@@ -1,4 +1,5 @@
 package intro
+
 // @desc Each call to **func3** uses a different function — check which one is passed and what it does to the input.
 
 val tripleIt3: (Int) -> Int = { i: Int -> i * 3 }
