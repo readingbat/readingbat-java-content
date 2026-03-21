@@ -1,4 +1,5 @@
 package strings
+
 // @desc Each index is doubled *before* being used to look up a character — calculate the new positions first.
 
 fun stringElements2(s: String, list: List<Int>): String =
