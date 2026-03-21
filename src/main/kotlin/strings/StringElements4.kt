@@ -1,5 +1,4 @@
 package strings
-
 // @desc The indices are first doubled, then filtered to keep only even values — work through both steps.
 
 fun stringElements4(s: String, list: List<Int>): String =

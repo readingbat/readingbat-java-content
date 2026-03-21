@@ -1,5 +1,4 @@
 package transformations
-
 // @desc **filter** keeps only the elements that pass the test — check each number from **0** to **i**.
 
 val isEven: (Int) -> Boolean = { i: Int -> i % 2 == 0 }

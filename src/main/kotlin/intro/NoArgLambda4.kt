@@ -1,5 +1,4 @@
 package intro
-
 // @desc The function returns a lambda that *captures* its parameter — trace what value the returned lambda holds.
 
 // Higher-order function as a return type

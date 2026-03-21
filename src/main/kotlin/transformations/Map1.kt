@@ -1,5 +1,4 @@
 package transformations
-
 // @desc **map** transforms every element in a range — apply the given function to each value from **0** to **i**.
 
 val doubleIt: (Int) -> Int = { i: Int -> i * 2 }

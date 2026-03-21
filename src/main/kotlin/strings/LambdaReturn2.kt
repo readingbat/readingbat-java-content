@@ -1,5 +1,4 @@
 package strings
-
 // @desc The returned lambda captures the input string and computes its **length** when invoked.
 
 fun lambdaReturn2(word: String): () -> Int = { word.length }

@@ -1,5 +1,4 @@
 package strings
-
 // @desc **sumOf** calls each lambda and adds up all the returned values in one step.
 
 fun funcSum2(funcs: List<() -> Int>): Int =

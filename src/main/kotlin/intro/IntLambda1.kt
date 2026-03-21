@@ -1,5 +1,4 @@
 package intro
-
 // @desc Follow the function calls step by step — what goes in, and what comes out?
 
 fun doubleIt1(i: Int): Int = i * 2

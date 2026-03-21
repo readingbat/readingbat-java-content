@@ -1,5 +1,4 @@
 package intro
-
 // @desc A lambda stored in a variable works just like a regular function — trace the input through the math.
 
 val doubleIt2: (Int) -> Int = { i: Int -> i * 2 }

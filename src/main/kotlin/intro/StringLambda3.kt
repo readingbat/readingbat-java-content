@@ -1,5 +1,4 @@
 package intro
-
 // @desc Each call passes a *different* function — check how many times each one applies **uppercase()**.
 
 val upperIt2: (String) -> String = { s: String -> s.uppercase() + s.uppercase() }

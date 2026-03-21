@@ -1,5 +1,4 @@
 package transformations
-
 // @desc Each character becomes its uppercase + lowercase pair — then only pairs containing **"a"** survive the filter.
 
 fun chain2(s: String): String =

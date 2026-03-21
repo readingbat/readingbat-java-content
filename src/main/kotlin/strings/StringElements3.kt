@@ -1,5 +1,4 @@
 package strings
-
 // @desc Only the *even* indices survive the **filter** — figure out which ones pass before looking up characters.
 
 fun stringElements3(s: String, list: List<Int>): String =
