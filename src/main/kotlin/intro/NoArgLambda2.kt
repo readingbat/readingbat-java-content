@@ -1,4 +1,5 @@
 package intro
+
 // @desc A lambda assigned to a variable can be called with **.invoke()** or directly with parentheses.
 
 val constVal: () -> Int = { 4 }
