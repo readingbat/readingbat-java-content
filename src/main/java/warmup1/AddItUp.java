@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Adds the sum of the numbers in an array
+// @desc Trace through the loop, keeping a running total as each element is visited.
 
 public class AddItUp {
 

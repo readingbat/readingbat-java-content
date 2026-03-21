@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Determine if at least one of three values is true with the **||** operator.
+// @desc The **||** operator returns **true** if *any* of the values is **true**.
 
 public class AndOr7 {
 

@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Returns the sum of the first half of an array of integers
+// @desc The loop breaks when it reaches the halfway point — trace where that cutoff falls.
 
 public class FirstHalf {
 

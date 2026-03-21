@@ -1,6 +1,6 @@
 package warmup2;
 
-// @desc Returns true if the letter appears at least twice in a string
+// @desc Track how many times the target character appears as you scan through the string.
 
 public class LookForIt {
 

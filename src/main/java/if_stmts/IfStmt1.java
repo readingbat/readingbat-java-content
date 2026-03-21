@@ -1,5 +1,7 @@
 package if_stmts;
 
+// @desc An **if** statement only runs its code block when the condition is **true**.
+
 public class IfStmt1 {
 
     public static int ifIt(int x) {

@@ -1,4 +1,5 @@
 package transformations
+// @desc **filter** keeps strings that match the condition — test each string in the list against the predicate.
 
 val inRange1: (String) -> Boolean = { s: String -> s.startsWith("H") }
 

@@ -1,6 +1,6 @@
 package warmup2;
 
-// @desc Returns the first 3 characters of a string repeated 3 times
+// @desc Think about what **substring()** returns when the string is shorter than the requested length.
 
 public class Front3 {
 

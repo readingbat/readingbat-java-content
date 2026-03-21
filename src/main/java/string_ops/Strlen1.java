@@ -1,6 +1,6 @@
 package string_ops;
 
-//@desc **length()** returns the length of a string.
+// @desc **length()** returns the total number of characters in a string, including spaces and punctuation.
 
 public class Strlen1 {
 

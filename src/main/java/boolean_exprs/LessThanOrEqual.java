@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Determine if one value is greater than or equal to another with the **<=** operator. Notice the **=** comes after the **<**.
+// @desc The **<=** operator returns **true** when the left value is less than *or equal to* the right.
 
 public class LessThanOrEqual {
 

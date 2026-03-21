@@ -1,4 +1,5 @@
 package transformations
+// @desc Work through the chain left to right: uppercase each character, filter to keep only **A–F**, then lowercase.
 
 fun chain1(s: String): String =
   s.asSequence()

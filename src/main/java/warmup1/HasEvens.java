@@ -2,7 +2,7 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
-// @desc Checks if each element in an array is even and returns a boolean array indicating the result
+// @desc **% 2** equals 0 for even numbers — check each element one at a time.
 
 public class HasEvens {
 

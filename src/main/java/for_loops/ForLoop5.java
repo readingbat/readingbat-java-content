@@ -1,6 +1,6 @@
 package for_loops;
 
-// @desc The .substring() method returns a portion of a string.
+// @desc Trace through each iteration, checking which characters pass the **if** test and get added to the result.
 
 public class ForLoop5 {
 

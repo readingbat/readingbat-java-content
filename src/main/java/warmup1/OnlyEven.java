@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Given an array of ints, return the sum of the even numbers in the array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+// @desc The **if** test skips some elements — only certain ones get added to the total.
 
 public class OnlyEven {
 

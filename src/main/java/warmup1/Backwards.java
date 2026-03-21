@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Adds the sum of the numbers in an array, but backwards (starting from the end of the array)
+// @desc The loop starts at the end of the array and works backward — trace which indices are visited.
 
 public class Backwards {
 

@@ -2,7 +2,7 @@ package warmup1;
 
 import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
 
-// @desc Checks if each element in an array is odd and returns a string array indicating the result
+// @desc **% 2** tells you if a number is odd or even — check each element and record the result.
 
 public class HasOdds {
 

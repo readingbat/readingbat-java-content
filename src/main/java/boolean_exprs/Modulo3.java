@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc **%2** is an easy way of testing if a number is odd or even.
+// @desc **% 2** gives **0** for even numbers and **1** for odd numbers.
 
 public class Modulo3 {
 

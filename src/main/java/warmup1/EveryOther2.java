@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Adds the sum of every other number in an array, starting with the first one
+// @desc The **if** inside the loop skips certain elements — which ones pass the test?
 
 public class EveryOther2 {
 

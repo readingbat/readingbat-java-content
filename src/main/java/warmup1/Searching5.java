@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Given 3 strings, a, b, c, return true if a and b contain c as a substring starting at index 2. So "xxabc" contains "abc" starting at index 2, but "xxxabc" does not.
+// @desc **indexOf()** returns the position where the match starts — compare that position to what's expected.
 
 public class Searching5 {
 

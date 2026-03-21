@@ -1,4 +1,5 @@
 package intro
+// @desc A lambda assigned to a variable works like a regular function — trace what **.invoke()** does.
 
 val upperIt: (String) -> String = { s: String -> s.uppercase() + s.uppercase() }
 

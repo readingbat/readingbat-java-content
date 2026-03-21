@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc Notice **substr()** can also be called with a single argument.
+// @desc String indices start at **0** — the first character is at position 0, the second at position 1.
 
 public class Substr2 {
 

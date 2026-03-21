@@ -1,6 +1,6 @@
 package warmup2;
 
-// @desc Checks if both values in an array are greater than 15 and less than 10
+// @desc Two separate loops set two boolean flags — trace when each flag becomes **true** and how they combine at the end.
 
 public class CheckBoth {
 

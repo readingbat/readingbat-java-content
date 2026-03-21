@@ -1,4 +1,5 @@
 package intro
+// @desc Each no-argument function returns a different constant — trace which one gets passed in each call.
 
 val constVal1: () -> Int = { 4 }
 

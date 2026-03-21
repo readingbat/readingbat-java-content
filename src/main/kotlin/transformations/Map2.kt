@@ -1,4 +1,5 @@
 package transformations
+// @desc The function maps each number to a **true**/**false** value — check the condition for every element in the range.
 
 val isInRange1: (Int) -> Boolean = { i: Int -> i in 3..6 }
 

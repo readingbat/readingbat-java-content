@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Counts the number of a's in a string
+// @desc The loop checks each character one at a time — count how many match the condition.
 
 public class StringLength {
 

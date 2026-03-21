@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Checks if a string is contained in another string
+// @desc **indexOf()** returns the position of a match, or **-1** if not found.
 
 public class Searching1 {
 

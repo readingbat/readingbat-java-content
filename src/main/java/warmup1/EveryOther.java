@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Adds every other number in an array, starting with the first one
+// @desc Notice the loop step size — not every element is visited.
 
 public class EveryOther {
 

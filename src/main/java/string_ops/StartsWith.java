@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc **startsWith()** returns True if a string starts with a specified substring.
+// @desc **startsWith()** checks whether a string begins with the given text and returns a **boolean**.
 
 public class StartsWith {
 

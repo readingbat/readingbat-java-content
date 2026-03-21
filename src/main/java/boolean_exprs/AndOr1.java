@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Truth tables
+// @desc The **&&** operator returns **true** only when *both* values are **true**.
 
 public class AndOr1 {
 

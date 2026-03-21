@@ -1,6 +1,6 @@
 package warmup2;
 
-// @desc Removes all question marks from a string
+// @desc The loop checks each character and decides whether to include it in the result.
 
 public class QuestionMarkOut {
 

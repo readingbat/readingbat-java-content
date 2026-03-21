@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Returns the first and last characters of a string
+// @desc Think about what happens when **substring()** is applied to the first and last characters. Watch for empty strings.
 
 public class FirstLast {
 

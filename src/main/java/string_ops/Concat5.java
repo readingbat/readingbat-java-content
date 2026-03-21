@@ -1,5 +1,7 @@
 package string_ops;
 
+// @desc The loop repeats the concatenation — count how many times the string gets appended.
+
 public class Concat5 {
 
     public static String combine(int t, String s) {

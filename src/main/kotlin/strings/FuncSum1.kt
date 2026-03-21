@@ -1,4 +1,5 @@
 package strings
+// @desc Each lambda in the list returns a number — **map** calls them all, then **sum()** adds the results.
 
 fun funcSum1(funcs: List<() -> Int>): Int =
     funcs.map { it() }.sum()

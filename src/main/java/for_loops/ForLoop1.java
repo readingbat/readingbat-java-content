@@ -1,6 +1,6 @@
 package for_loops;
 
-// @desc **+= 2** increments by 2
+// @desc A **for** loop repeats its body for each value of the loop variable — trace what happens on each step.
 
 public class ForLoop1 {
 

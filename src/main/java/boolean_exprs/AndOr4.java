@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc The **not** operator flips a boolean value.
+// @desc When **&&** and **||** appear together, **&&** is evaluated first — just like multiplication before addition.
 
 public class AndOr4 {
 

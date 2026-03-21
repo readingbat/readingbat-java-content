@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Given a string name, e.g. "Bob", return a greeting of the form "Goodbye Bob!".
+// @desc Notice how the **+** operator joins strings together with other text.
 
 public class SayGoodbye {
 

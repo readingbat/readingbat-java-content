@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc The first character in a string is at index 0.
+// @desc Pay attention to the start and end values passed to **substring()** — the end index is exclusive.
 
 public class Substr3 {
 

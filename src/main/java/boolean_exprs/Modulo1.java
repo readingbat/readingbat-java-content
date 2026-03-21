@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc The [modulo](https://www.java67.com/2014/11/modulo-or-remainder-operator-in-java.html) operator (**%**) returns the remainder after dividing two numbers.
+// @desc The **%** operator returns the remainder after division. For example, **7 % 3** equals **1**.
 
 public class Modulo1 {
 

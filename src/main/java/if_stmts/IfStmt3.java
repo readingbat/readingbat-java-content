@@ -1,5 +1,7 @@
 package if_stmts;
 
+// @desc With **if/else if/else**, only the *first* **true** condition's block executes — the rest are skipped.
+
 public class IfStmt3 {
 
     public static int ifIt(int x, boolean y) {

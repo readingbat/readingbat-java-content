@@ -1,4 +1,5 @@
 package strings
+// @desc The list of indices tells you *which* characters to pick from the string — remember indexing starts at **0**.
 
 fun stringElements1(s: String, list: List<Int>): String =
     buildString {

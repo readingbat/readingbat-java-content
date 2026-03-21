@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Notice the lack of curly braces inside the embedded for loop.
+// @desc Notice the nested loops — the inner loop only runs when the outer loop's condition is met.
 
 public class Searching4 {
 

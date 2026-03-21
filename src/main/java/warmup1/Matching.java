@@ -1,6 +1,6 @@
 package warmup1;
 
-// desc Given a string, return true if the first 3 chars in the string also appear at the end of the string, such as with "edited".
+// @desc Compare the first few characters with the last few — **substring()** can extract both ends.
 
 public class Matching {
 

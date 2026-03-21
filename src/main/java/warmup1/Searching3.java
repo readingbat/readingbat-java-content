@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Checks if a string is contained in another string
+// @desc Think about what happens when **indexOf()** returns different values for each string.
 
 public class Searching3 {
 

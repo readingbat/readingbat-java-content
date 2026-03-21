@@ -1,6 +1,6 @@
 package boolean_exprs;
 
-// @desc Determine if two value are equal with the **==** operator. Notice the 2 **=** characters.
+// @desc The **==** operator compares two values and returns **true** when they are the same.
 
 public class Equal {
 

@@ -1,6 +1,6 @@
 package string_ops;
 
-// @desc The **+** operator combines two strings into a new string
+// @desc The **+** operator joins strings together end-to-end.
 
 public class Concat1 {
 

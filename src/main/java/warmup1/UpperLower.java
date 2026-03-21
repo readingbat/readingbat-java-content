@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Returns a string with the first letter of each word capitalized
+// @desc **toUpperCase()** and **toLowerCase()** transform individual characters — track which parts of the string change.
 
 public class UpperLower {
 

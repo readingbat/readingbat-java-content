@@ -1,6 +1,6 @@
 package warmup1;
 
-// @desc Notice the use of the contains method.
+// @desc **contains()** returns **true** if the substring appears anywhere in the string.
 
 public class Searching2 {
 
