@@ -1,6 +1,6 @@
 package arrays;
 
-import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
+import static com.pambrose.common.util.ArrayUtils.arrayPrint;
 
 // @desc Build a new array by copying elements from the end to the beginning.
 

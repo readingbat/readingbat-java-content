@@ -1,6 +1,6 @@
 package warmup1;
 
-import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
+import static com.pambrose.common.util.ArrayUtils.arrayPrint;
 
 // @desc **% 2** tells you if a number is odd or even — check each element and record the result.
 

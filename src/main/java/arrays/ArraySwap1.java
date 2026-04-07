@@ -1,6 +1,6 @@
 package arrays;
 
-import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
+import static com.pambrose.common.util.ArrayUtils.arrayPrint;
 
 // @desc Swap the first and last elements — use a temporary variable to hold one value during the exchange.
 

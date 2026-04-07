@@ -1,6 +1,6 @@
 package arrays_2d;
 
-import static com.github.pambrose.common.util.ArrayUtils.arrayPrint;
+import static com.pambrose.common.util.ArrayUtils.arrayPrint;
 
 // @desc For each row, add up all the column values — the result array has one sum per row.
 

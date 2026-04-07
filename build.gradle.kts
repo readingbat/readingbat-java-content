@@ -11,13 +11,12 @@ application {
   mainClass = "ContentServerKt"
 }
 
-group = "com.github.pambrose.readingbat"
+group = "com.pambrose.readingbat"
 version = "1.0.0"
 
 repositories {
   google()
   mavenCentral()
-  maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
