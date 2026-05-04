@@ -7,10 +7,15 @@ Java and Kotlin programming challenges for the [ReadingBat](https://github.com/r
 Requires JDK 17+.
 
 ```bash
-./gradlew build -x test        # Compile
+./gradlew build -x test         # Compile
 ./gradlew run                   # Start the content server on http://localhost:8080
 ./gradlew --rerun-tasks check   # Run all tests
+./gradlew test --tests "ContentTests"           # Run a single test class
+./gradlew test -Dkotest.filter.tests="<name>"   # Filter Kotest cases by name
+make uberjar                    # Build fat jar at build/libs/server.jar
 ```
+
+When running locally, challenge files are loaded directly from disk (via `FileSystemSource`), so edits are picked up on reload without a rebuild. Production builds load content from this GitHub repository.
 
 ## Challenge Structure
 

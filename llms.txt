@@ -21,3 +21,20 @@ Each challenge is a standalone source file. The `main()` function prints expecte
 - Kotlin/JVM 17, Gradle (Kotlin DSL)
 - readingbat-core (platform library, from JitPack)
 - Kotest + Ktor test host (testing)
+
+## Common Commands
+
+- `./gradlew build -x test` — compile without tests
+- `./gradlew --rerun-tasks check` — run all tests
+- `./gradlew test --tests "ContentTests"` — run a single test class
+- `./gradlew test -Dkotest.filter.tests="<name>"` — filter Kotest cases by name
+- `./gradlew run` — start the content server on http://localhost:8080
+- `make uberjar` — build fat jar at `build/libs/server.jar`
+- `make uber` — build uberjar and run it
+- `make versioncheck` — check for dependency updates
+
+## Local vs Production
+
+The DSL in `Content.kt` swaps the `repo` source based on `isProduction()`:
+- Local dev uses `FileSystemSource("./")` — challenge files load directly from disk, so edits are picked up on reload without a rebuild.
+- Production uses `GitHubRepo` — content is fetched from the GitHub repository.
