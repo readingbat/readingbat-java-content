@@ -11,10 +11,14 @@ This is a **ReadingBat content repository** — it defines Java and Kotlin progr
 ```bash
 ./gradlew build -x test       # Compile without tests
 ./gradlew --rerun-tasks check  # Run all tests
+./gradlew test --tests "ContentTests"          # Run a single test class
+./gradlew test -Dkotest.filter.tests="<name>"  # Filter Kotest cases by name
 ./gradlew run                  # Start the content server locally (port 8080)
 make tests                     # Shortcut for running tests
 make build                     # Shortcut for compile
 make cc                        # Continuous compilation (watches for changes)
+make uberjar                   # Build fat jar at build/libs/server.jar
+make uber                      # Build uberjar and run it
 make versioncheck              # Check for dependency updates
 ```
 
@@ -25,7 +29,7 @@ The project uses JVM toolchain 17 and Kotest with JUnit Platform.
 ### Content Definition (DSL)
 
 `src/main/kotlin/Content.kt` is the central file. It uses the `readingBatContent` DSL to declare all challenges organized by language, groups, and individual challenges. The DSL references:
-- A `repo` source — `GitHubRepo` in production, `FileSystemSource("./")` for local dev (controlled by `isProduction()`)
+- A `repo` source — `GitHubRepo` in production, `FileSystemSource("./")` for local dev (controlled by `isProduction()`). Local dev reads challenge files directly from disk, so edits are picked up on reload without a rebuild.
 - `java { }` and `kotlin { }` blocks that define language sections
 - `group()` blocks with `packageName`, `description`, and challenge declarations
 - Challenges can be added individually via `challenge("ClassName")` or in bulk via `includeFiles` / `includeFilesWithType` glob patterns
