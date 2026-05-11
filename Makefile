@@ -10,6 +10,18 @@ clean:
 build:
 	./gradlew build -xtest
 
+lint: ## Run Kotlinter and detekt
+	./gradlew lintKotlin detekt
+
+format: ## Format Kotlin sources with kotlinter
+	./gradlew formatKotlin
+
+detekt: ## Run detekt static analysis
+	./gradlew detekt
+
+detekt-baseline: ## Generate detekt baseline file
+	./gradlew detektBaseline
+
 tests:
 	./gradlew --rerun-tasks check
 
