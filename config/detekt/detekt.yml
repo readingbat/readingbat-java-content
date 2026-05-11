@@ -1,0 +1,7 @@
+style:
+  MagicNumber:
+    active: false
+  FunctionOnlyReturningConstant:
+    active: false
+  MaxLineLength:
+    active: false

@@ -24,11 +24,11 @@ import com.readingbat.kotest.TestSupport.forEachLanguage
 import com.readingbat.kotest.TestSupport.initTestProperties
 import com.readingbat.kotest.TestSupport.shouldHaveAnswer
 import com.readingbat.kotest.TestSupport.testModule
-import com.readingbat.posts.AnswerStatus.*
+import com.readingbat.posts.AnswerStatus
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
-import io.ktor.server.testing.*
+import io.ktor.server.testing.testApplication
 
 class ContentTests : StringSpec() {
   init {
@@ -44,16 +44,16 @@ class ContentTests : StringSpec() {
           forEachGroup {
             forEachChallenge {
               answerAllWith(this@testApplication, "") {
-                answerStatus shouldBe NOT_ANSWERED
+                answerStatus shouldBe AnswerStatus.NOT_ANSWERED
                 hint.shouldBeBlank()
               }
 
               answerAllWith(this@testApplication, "wrong answer") {
-                answerStatus shouldBe INCORRECT
+                answerStatus shouldBe AnswerStatus.INCORRECT
               }
 
               answerAllWithCorrectAnswer(this@testApplication) {
-                answerStatus shouldBe CORRECT
+                answerStatus shouldBe AnswerStatus.CORRECT
                 hint.shouldBeBlank()
               }
             }

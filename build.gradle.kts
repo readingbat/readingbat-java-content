@@ -5,6 +5,8 @@ plugins {
   alias(libs.plugins.kotlin.jvm)
   alias(libs.plugins.versions)
   alias(libs.plugins.ktor.plugin)
+  alias(libs.plugins.detekt)
+  alias(libs.plugins.kotlinter)
 }
 
 // This is for ./gradlew run
@@ -26,6 +28,18 @@ kotlin {
   jvmToolchain(libs.versions.jvm.get().toInt())
 }
 
+detekt {
+  source.setFrom("src/main/kotlin", "src/test/kotlin")
+  buildUponDefaultConfig = true
+  parallel = true
+}
+
+kotlinter {
+  ignoreFormatFailures = false
+  ignoreLintFailures = false
+  reporters = arrayOf("checkstyle", "plain")
+}
+
 tasks.register("stage") {
   dependsOn("clean", "build")
 }
@@ -45,7 +59,7 @@ tasks.test {
   useJUnitPlatform()
 
   testLogging {
-    events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
+    events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED, TestLogEvent.STANDARD_ERROR)
     exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
     showStandardStreams = false
   }
