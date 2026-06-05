@@ -1,8 +1,9 @@
-.PHONY: default help clean build lint format detekt detekt-baseline tests uberjar uber cc run heroku logs versioncheck upgrade-wrapper
+.PHONY: default help clean build lint format detekt detekt-baseline tests uberjar uber \
+        cc run heroku logs versions upgrade-wrapper
 
-GRADLE_VERSION := $(shell sed -n 's/^gradle = "\(.*\)"/\1/p' gradle/libs.versions.toml)
+GRADLE_VERSION := $(shell sed -n 's/^gradle-wrapper = "\(.*\)"/\1/p' gradle/libs.versions.toml)
 
-default: versioncheck
+default: help
 
 help:  ## Show this help (list of targets)
 	@awk 'BEGIN {FS = ":.*?## "; printf "Usage: make <target>\n\nTargets:\n"} \
@@ -47,8 +48,8 @@ heroku: ## Deploy by pushing master to Heroku
 logs: ## Tail Heroku logs
 	heroku logs --tail
 
-versioncheck: ## Check for dependency updates
-	./gradlew dependencyUpdates
+versions: ## Check for dependency updates
+	./gradlew dependencyUpdates --no-configuration-cache --no-parallel
 
 # Gradle's documented upgrade procedure: the first run rewrites
 # gradle-wrapper.properties using the *old* wrapper jar; the second run
