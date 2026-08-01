@@ -112,6 +112,12 @@ every challenge: empty answers must report `NOT_ANSWERED`, wrong answers `INCORR
 and the expected outputs `CORRECT`. A CI workflow runs the tests and lint on every
 push and pull request.
 
+## Versioning
+
+The repository ran untagged from its 2020 launch until `1.0.0`, which marks a baseline
+rather than a feature milestone. Releases are tagged without a `v` prefix, and the
+current version is tracked in `gradle.properties`.
+
 ## Documentation
 
 - [CHANGELOG.md](CHANGELOG.md) — dated history of notable changes

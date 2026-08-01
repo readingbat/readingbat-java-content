@@ -8,6 +8,17 @@ changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
+## v1.0.1 (August 2026)
+
+A documentation correctness pass, with no content or build changes. Tagging `1.0.0`
+prompted an audit of the project's machine-readable summary, which turned out to have
+drifted: `llms.txt` still described the JVM toolchain as 17 (it moved to 25 with the JDK
+25 bump) and advertised a `make versioncheck` target that does not exist. Both are fixed,
+and `llms.txt` now defers to `gradle/libs.versions.toml` and `make help` rather than
+restating values that drift. It also picked up the challenge naming contract, the Kotlin
+`returnType` requirement, and the detekt/kotlinter gates. `README.md` and `CLAUDE.md`
+gained short notes on how versioning and changelog upkeep work.
+
 ## v1.0.0 (August 2026)
 
 The first tagged release. The repository ran untagged for six years, so `1.0.0`

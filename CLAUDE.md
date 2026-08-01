@@ -4,6 +4,12 @@
 
 This is a **ReadingBat content repository** — it defines Java and Kotlin programming challenges served by the [readingbat-core](https://github.com/readingbat/readingbat-core) platform. It is not a standalone application; it provides challenge content that the ReadingBat server renders as interactive coding exercises.
 
+## Conventions
+
+Record notable changes in `CHANGELOG.md` under an `[Unreleased]` heading; it becomes the
+next version's section at release time. Releases are tagged without a `v` prefix (`1.0.1`),
+and the version lives in `gradle.properties`.
+
 ## Build & Test Commands
 
 `make help` lists every build, test, lint, and run target.
