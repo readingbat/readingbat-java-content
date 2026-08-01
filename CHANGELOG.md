@@ -8,6 +8,19 @@ grouped by date and milestone rather than semantic version. The content tracks
 the [readingbat-core](https://github.com/readingbat/readingbat-core) platform, so
 many entries reflect dependency and toolchain upgrades.
 
+## [Unreleased]
+
+### Changed
+- Split the `Test all challenges` case in `ContentTests` into per-language `Test all Java
+  challenges` and `Test all Kotlin challenges`. `testApplication` wraps `runTest`, whose
+  default timeout is 60s, and verifying every challenge in one body ran close enough to
+  that budget to time out on a slow CI runner. The shared assertions moved into a
+  `verifyAllChallenges` helper, and a failure now names the language that broke.
+
+### Added
+- `Per-language tests cover every challenge` guard, so adding a language to `Content.kt`
+  fails the suite rather than silently leaving its challenges untested.
+
 ## [1.0.1] - 2026-08-01
 
 Documentation-only release. No content, dependency, or build-logic changes.

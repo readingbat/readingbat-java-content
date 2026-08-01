@@ -15,6 +15,7 @@
  *
  */
 
+import com.readingbat.dsl.LanguageGroup
 import com.readingbat.kotest.TestSupport.answerAllWith
 import com.readingbat.kotest.TestSupport.answerAllWithCorrectAnswer
 import com.readingbat.kotest.TestSupport.forEachAnswer
@@ -28,38 +29,65 @@ import com.readingbat.posts.AnswerStatus
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
+import io.ktor.server.testing.ApplicationTestBuilder
 import io.ktor.server.testing.testApplication
 
 class ContentTests : StringSpec() {
+  // Challenges are exercised one language at a time rather than in a single sweep.
+  // testApplication wraps runTest, whose default timeout is 60s; verifying every
+  // challenge in one test body ran close enough to that budget to fail on a slow CI
+  // runner. Splitting keeps each body well inside the default and pinpoints which
+  // language broke.
+  private fun LanguageGroup<*>.verifyAllChallenges(engine: ApplicationTestBuilder) =
+    forEachGroup {
+      forEachChallenge {
+        answerAllWith(engine, "") {
+          answerStatus shouldBe AnswerStatus.NOT_ANSWERED
+          hint.shouldBeBlank()
+        }
+
+        answerAllWith(engine, "wrong answer") {
+          answerStatus shouldBe AnswerStatus.INCORRECT
+        }
+
+        answerAllWithCorrectAnswer(engine) {
+          answerStatus shouldBe AnswerStatus.CORRECT
+          hint.shouldBeBlank()
+        }
+      }
+    }
+
+  private val LanguageGroup<*>.challengeCount: Int
+    get() = challengeGroups.sumOf { it.challenges.size }
+
   init {
     beforeEach { initTestProperties() }
 
-    "Test all challenges" {
+    "Test all Java challenges" {
       testApplication {
         application {
           testModule(content)
         }
 
-        content.forEachLanguage {
-          forEachGroup {
-            forEachChallenge {
-              answerAllWith(this@testApplication, "") {
-                answerStatus shouldBe AnswerStatus.NOT_ANSWERED
-                hint.shouldBeBlank()
-              }
-
-              answerAllWith(this@testApplication, "wrong answer") {
-                answerStatus shouldBe AnswerStatus.INCORRECT
-              }
-
-              answerAllWithCorrectAnswer(this@testApplication) {
-                answerStatus shouldBe AnswerStatus.CORRECT
-                hint.shouldBeBlank()
-              }
-            }
-          }
-        }
+        content.java.verifyAllChallenges(this@testApplication)
       }
+    }
+
+    "Test all Kotlin challenges" {
+      testApplication {
+        application {
+          testModule(content)
+        }
+
+        content.kotlin.verifyAllChallenges(this@testApplication)
+      }
+    }
+
+    // The two tests above name content.java and content.kotlin explicitly, so a
+    // language added to Content.kt would otherwise go silently untested.
+    "Per-language tests cover every challenge" {
+      val covered = content.java.challengeCount + content.kotlin.challengeCount
+      content.languages.sumOf { it.challengeCount } shouldBe covered
     }
 
     "Test with correct answers" {
