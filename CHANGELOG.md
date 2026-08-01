@@ -8,6 +8,30 @@ grouped by date and milestone rather than semantic version. The content tracks
 the [readingbat-core](https://github.com/readingbat/readingbat-core) platform, so
 many entries reflect dependency and toolchain upgrades.
 
+## [1.0.1] - 2026-08-01
+
+Documentation-only release. No content, dependency, or build-logic changes.
+
+### Fixed
+- `llms.txt` reported the JVM toolchain as **17**; the catalog has been on **25** since
+  the JDK 25 bump. It now points at the `jvm` key in `gradle/libs.versions.toml` instead
+  of restating a version that can drift.
+- `llms.txt` listed a `make versioncheck` target that does not exist. The target is
+  `make versions`.
+
+### Changed
+- Bumped `version` in `gradle.properties` to `1.0.1`.
+- `llms.txt` now lists Makefile targets (with a pointer to `make help` as the
+  authoritative list) rather than raw `gradlew` invocations, and records detekt and
+  kotlinter as CI-enforced.
+- `llms.txt` documents the challenge naming contract and the Kotlin `returnType`
+  requirement, and gained a Versioning section pointing at `CHANGELOG.md` and
+  `RELEASE_NOTES.md`.
+
+### Added
+- Note in `CLAUDE.md` that notable changes belong in `CHANGELOG.md`.
+- Versioning section in `README.md`.
+
 ## [1.0.0] - 2026-08-01
 
 First tagged release. Establishes a baseline at the current state of the content

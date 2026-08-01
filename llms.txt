@@ -14,24 +14,32 @@ This repository provides interactive coding challenges served by [readingbat-cor
 
 ## Challenge Convention
 
-Each challenge is a standalone source file. The `main()` function prints expected outputs which become the answer key. Java challenges use a `@desc` comment for descriptions.
+Each challenge is a standalone source file. The `main()` function prints expected outputs which become the answer key. Java challenges use a `@desc` comment for descriptions. The class or file name must match what is declared in `Content.kt`, and Kotlin challenges require an explicit `returnType` (e.g. `IntType`, `StringType`, `IntListType`) — either per-challenge or via `includeFilesWithType`.
 
 ## Tech Stack
 
-- Kotlin/JVM 17, Gradle (Kotlin DSL)
+- Kotlin / JVM, Gradle (Kotlin DSL) with a version catalog. The JVM toolchain version is centralized in `gradle/libs.versions.toml` under the `jvm` key.
 - readingbat-core (platform library, from JitPack)
 - Kotest + Ktor test host (testing)
+- detekt + kotlinter (static analysis and formatting, enforced in CI)
 
 ## Common Commands
 
-- `./gradlew build -x test` — compile without tests
-- `./gradlew --rerun-tasks check` — run all tests
-- `./gradlew test --tests "ContentTests"` — run a single test class
-- `./gradlew test -Dkotest.filter.tests="<name>"` — filter Kotest cases by name
-- `./gradlew run` — start the content server on http://localhost:8080
+Run `make help` for the authoritative target list.
+
+- `make build` — compile without running tests
+- `make tests` — run all tests
+- `make lint` — run kotlinter and detekt
+- `make format` — format Kotlin sources
+- `make run` — start the content server on http://localhost:8080
 - `make uberjar` — build fat jar at `build/libs/server.jar`
 - `make uber` — build uberjar and run it
-- `make versioncheck` — check for dependency updates
+- `make versions` — check for dependency updates
+- `./gradlew test -Dkotest.filter.tests="<name>"` — filter Kotest cases by name
+
+## Versioning
+
+Releases are tagged (`1.0.0` onward) with the version tracked in `gradle.properties`. See `CHANGELOG.md` for the dated history and `RELEASE_NOTES.md` for narrative milestones.
 
 ## Local vs Production
 
