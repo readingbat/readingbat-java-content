@@ -17,6 +17,13 @@ many entries reflect dependency and toolchain upgrades.
   that budget to time out on a slow CI runner. The shared assertions moved into a
   `verifyAllChallenges` helper, and a failure now names the language that broke.
 
+- Gave the two challenge sweeps an explicit 5-minute timeout. They now await
+  `runTestApplication` directly instead of calling `testApplication`, which is
+  `runTestWithRealTime { runTestApplication(..) }` — that wrapper is what imposes
+  `runTest`'s 60s default, and a Kotest timeout cannot raise it. Awaiting the inner
+  function inside the (already coroutine-based) Kotest body leaves the declared timeout
+  as the only governing limit.
+
 ### Added
 - `Per-language tests cover every challenge` guard, so adding a language to `Content.kt`
   fails the suite rather than silently leaving its challenges untested.

@@ -27,17 +27,30 @@ import com.readingbat.kotest.TestSupport.shouldHaveAnswer
 import com.readingbat.kotest.TestSupport.testModule
 import com.readingbat.posts.AnswerStatus
 import io.kotest.core.spec.style.StringSpec
+import io.kotest.core.test.config.TestConfig
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
 import io.ktor.server.testing.ApplicationTestBuilder
+import io.ktor.server.testing.runTestApplication
 import io.ktor.server.testing.testApplication
+import kotlin.time.Duration.Companion.minutes
 
 class ContentTests : StringSpec() {
-  // Challenges are exercised one language at a time rather than in a single sweep.
-  // testApplication wraps runTest, whose default timeout is 60s; verifying every
-  // challenge in one test body ran close enough to that budget to fail on a slow CI
-  // runner. Splitting keeps each body well inside the default and pinpoints which
-  // language broke.
+  private companion object {
+    // Each sweep takes ~10s locally and CI runs several times slower. This is sized to
+    // absorb that without flaking, while still failing on a genuine hang.
+    val CHALLENGE_SWEEP_TIMEOUT = 5.minutes
+  }
+
+  // Challenges are exercised one language at a time rather than in a single sweep, and
+  // the two sweeps set their own timeout instead of inheriting a hidden one.
+  //
+  // `testApplication` is `runTestWithRealTime { runTestApplication(..) }`, and that
+  // wrapper is what applies runTest's 60s default — a Kotest timeout cannot raise it,
+  // so a slow CI runner failed with UncompletedCoroutinesError rather than an
+  // assertion. `runTestApplication` is the same public entry point without the wrapper,
+  // and because a Kotest test body is already a coroutine it can be awaited directly.
+  // That leaves CHALLENGE_SWEEP_TIMEOUT as the single governing limit.
   private fun LanguageGroup<*>.verifyAllChallenges(engine: ApplicationTestBuilder) =
     forEachGroup {
       forEachChallenge {
@@ -63,23 +76,23 @@ class ContentTests : StringSpec() {
   init {
     beforeEach { initTestProperties() }
 
-    "Test all Java challenges" {
-      testApplication {
+    "Test all Java challenges".config(TestConfig(timeout = CHALLENGE_SWEEP_TIMEOUT)) {
+      runTestApplication {
         application {
           testModule(content)
         }
 
-        content.java.verifyAllChallenges(this@testApplication)
+        content.java.verifyAllChallenges(this@runTestApplication)
       }
     }
 
-    "Test all Kotlin challenges" {
-      testApplication {
+    "Test all Kotlin challenges".config(TestConfig(timeout = CHALLENGE_SWEEP_TIMEOUT)) {
+      runTestApplication {
         application {
           testModule(content)
         }
 
-        content.kotlin.verifyAllChallenges(this@testApplication)
+        content.kotlin.verifyAllChallenges(this@runTestApplication)
       }
     }
 
