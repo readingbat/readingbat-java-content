@@ -8,6 +8,34 @@ changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
+## v1.1.0 (September 2026)
+
+A test-reliability release, prompted by a CI failure on a pull request that contained no
+code at all. `ContentTests` verified the entire catalog in a single `Test all challenges`
+body, and on a slow runner that sweep drifted past a timeout nobody had set deliberately.
+Ktor's `testApplication` is `runTestWithRealTime { runTestApplication(..) }`, and the
+wrapper imposes `runTest`'s 60-second default — a ceiling a Kotest timeout cannot raise,
+so the build failed with `UncompletedCoroutinesError` rather than an assertion.
+
+The fix addresses both halves of the problem. The sweep is now split per language, so the
+largest single body (Java, 11.4s locally) takes a little over half the time the combined
+one did, and a failure names the language that broke rather than just "all challenges".
+Both sweeps then await `runTestApplication` directly, which drops the hidden ceiling and
+leaves an explicit 5-minute timeout as the only governing limit — confirmed by setting it
+to one second and watching Kotest's own spec-scope timeout replace the coroutine error.
+Because the two cases name `content.java` and `content.kotlin` explicitly, a new
+`Per-language tests cover every challenge` guard fails the suite if a language added to
+`Content.kt` would otherwise go silently untested.
+
+The release also adds the repository's first `.gitattributes`. `gradlew.bat` had been
+stored with LF endings, which `cmd.exe` mis-parses around labels and multi-line `set`
+blocks — a latent break that Linux-only CI would never have surfaced. Stored blobs are
+now normalized to LF, `*.bat` is checked out CRLF, and `*.jar` is pinned binary.
+
+Dependencies moved forward as well: readingbat-core 3.4.0, Ktor 3.6.0, Kotest 6.2.5,
+kotlinter 5.7.0, detekt 2.0.0-alpha.6, and the Gradle wrapper 9.7.1. No challenge content
+changed in this release.
+
 ## v1.0.1 (August 2026)
 
 A documentation correctness pass, with no content or build changes. Tagging `1.0.0`

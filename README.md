@@ -96,6 +96,7 @@ src/main/kotlin/<package>/*.kt     # Kotlin challenge files
 src/main/resources/application.conf # HOCON server config (content, site, Ktor settings)
 src/test/kotlin/ContentTests.kt    # Kotest suite validating every challenge
 gradle/libs.versions.toml          # Centralized dependency & toolchain versions
+.gitattributes                     # Line-ending normalization (LF in-repo, CRLF for *.bat)
 ```
 
 ## Tech Stack
@@ -107,10 +108,19 @@ gradle/libs.versions.toml          # Centralized dependency & toolchain versions
 
 ## Testing
 
-`ContentTests.kt` uses Kotest `StringSpec` with Ktor's `testApplication` to validate
-every challenge: empty answers must report `NOT_ANSWERED`, wrong answers `INCORRECT`,
-and the expected outputs `CORRECT`. A CI workflow runs the tests and lint on every
-push and pull request.
+`ContentTests.kt` uses Kotest `StringSpec` to validate every challenge against a Ktor
+test host: empty answers must report `NOT_ANSWERED`, wrong answers `INCORRECT`, and the
+expected outputs `CORRECT`.
+
+The catalog is swept one language at a time — `Test all Java challenges` and `Test all
+Kotlin challenges` — sharing a `verifyAllChallenges` helper, so a failure names the
+language that broke. Both sweeps declare an explicit 5-minute timeout and await
+`runTestApplication` directly; `testApplication` wraps it in `runTest`, whose 60-second
+default a Kotest timeout cannot raise. Because those two cases name `content.java` and
+`content.kotlin` explicitly, a `Per-language tests cover every challenge` guard fails the
+suite if a language added to `Content.kt` is left uncovered.
+
+A CI workflow runs the tests and lint on JDK 25 for every push and pull request.
 
 ## Versioning
 
