@@ -10,7 +10,8 @@ This repository provides interactive coding challenges served by [readingbat-cor
 - `src/main/kotlin/ContentServer.kt`: Server entry point (delegates to readingbat-core)
 - `src/main/java/<package>/*.java`: Java challenge files (each a class with a static method and main())
 - `src/main/kotlin/<package>/*.kt`: Kotlin challenge files (top-level functions with main())
-- `src/test/kotlin/ContentTests.kt`: Kotest tests validating all challenges via Ktor test server
+- `src/test/kotlin/ContentTests.kt`: Kotest suite validating all challenges via a Ktor test host
+- `.gitattributes`: line-ending normalization — LF in the repository, `*.bat` checked out CRLF, `*.jar` binary
 
 ## Challenge Convention
 
@@ -36,6 +37,14 @@ Run `make help` for the authoritative target list.
 - `make uber` — build uberjar and run it
 - `make versions` — check for dependency updates
 - `./gradlew test -Dkotest.filter.tests="<name>"` — filter Kotest cases by name
+
+## Testing
+
+`ContentTests.kt` sweeps the catalog one language at a time (`Test all Java challenges`, `Test all Kotlin challenges`) through a shared `verifyAllChallenges` helper: empty answers must report `NOT_ANSWERED`, wrong answers `INCORRECT`, and each challenge's `main()` output `CORRECT`.
+
+Two constraints are easy to break when editing the suite:
+- The sweeps await `runTestApplication` directly rather than calling `testApplication`. `testApplication` is `runTestWithRealTime { runTestApplication(..) }`, and that wrapper imposes `runTest`'s 60s default — a ceiling a Kotest `TestConfig(timeout = ..)` cannot raise. Awaiting the inner entry point leaves the declared 5-minute timeout as the only limit.
+- The sweeps name `content.java` and `content.kotlin` explicitly, so a new language in `Content.kt` needs its own sweep. The `Per-language tests cover every challenge` case fails the suite as a reminder.
 
 ## Versioning
 

@@ -7,8 +7,11 @@ This is a **ReadingBat content repository** — it defines Java and Kotlin progr
 ## Conventions
 
 Record notable changes in `CHANGELOG.md` under an `[Unreleased]` heading; it becomes the
-next version's section at release time. Releases are tagged without a `v` prefix (`1.0.1`),
+next version's section at release time. Releases are tagged without a `v` prefix (`1.1.0`),
 and the version lives in `gradle.properties`.
+
+`.gitattributes` governs line endings: stored blobs are LF, `gradlew` stays LF, and
+`*.bat` is checked out CRLF because `cmd.exe` mis-parses LF batch files.
 
 ## Build & Test Commands
 
@@ -17,6 +20,21 @@ and the version lives in `gradle.properties`.
 ```bash
 ./gradlew test -Dkotest.filter.tests="<name>"  # Filter Kotest cases by name
 ```
+
+## Testing
+
+`src/test/kotlin/ContentTests.kt` sweeps every challenge through a Ktor test host, one
+language at a time. Two constraints there are easy to break:
+
+- Await `runTestApplication` directly in the sweeps rather than calling `testApplication`.
+  `testApplication` is `runTestWithRealTime { runTestApplication(..) }`, and that wrapper
+  imposes `runTest`'s 60s default — a ceiling a Kotest `TestConfig(timeout = ..)` cannot
+  raise, which surfaces as `UncompletedCoroutinesError` on a slow runner instead of an
+  assertion failure. A Kotest test body is already a coroutine, so awaiting the inner
+  entry point leaves the declared timeout as the only governing limit.
+- The sweeps name `content.java` and `content.kotlin` explicitly, so a language added to
+  `Content.kt` needs a sweep of its own. The `Per-language tests cover every challenge`
+  case fails the suite as a reminder.
 
 ## Architecture
 

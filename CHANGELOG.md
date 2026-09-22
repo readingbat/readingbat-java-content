@@ -8,9 +8,20 @@ grouped by date and milestone rather than semantic version. The content tracks
 the [readingbat-core](https://github.com/readingbat/readingbat-core) platform, so
 many entries reflect dependency and toolchain upgrades.
 
-## [Unreleased]
+## [1.1.0] - 2026-09-21
+
+Test-reliability and dependency upkeep. No challenge content changed.
 
 ### Changed
+- Bumped `version` in `gradle.properties` to `1.1.0`.
+
+- Upgraded dependencies: readingbat-core `3.3.1` → `3.4.0`, Ktor `3.5.1` → `3.6.0`,
+  Kotest `6.2.3` → `6.2.5`, kotlinter `5.6.0` → `5.7.0`, detekt `2.0.0-alpha.5` →
+  `2.0.0-alpha.6`, and the Gradle versions plugin `0.57.0` → `0.64.0`. Kotlin stays at
+  `2.4.10`, common-utils at `3.2.2`, and the JVM toolchain at **25**.
+
+- Upgraded the Gradle wrapper `9.6.1` → `9.7.1`.
+
 - Split the `Test all challenges` case in `ContentTests` into per-language `Test all Java
   challenges` and `Test all Kotlin challenges`. `testApplication` wraps `runTest`, whose
   default timeout is 60s, and verifying every challenge in one body ran close enough to
@@ -27,6 +38,15 @@ many entries reflect dependency and toolchain upgrades.
 ### Added
 - `Per-language tests cover every challenge` guard, so adding a language to `Content.kt`
   fails the suite rather than silently leaving its challenges untested.
+
+- `.gitattributes`, which the repository had never had. `* text=auto` normalizes stored
+  blobs to LF regardless of a contributor's `core.autocrlf`, `*.jar` is pinned `binary`,
+  and the Gradle wrapper scripts get explicit endings: `/gradlew` stays `eol=lf` and
+  `*.bat` becomes `eol=crlf`. `gradlew.bat` had been committed with LF endings, which
+  `cmd.exe` mis-parses around labels and multi-line `set` blocks — CI is Linux-only, so
+  that would only ever have surfaced on a contributor's Windows checkout. `.editorconfig`
+  already declared `end_of_line = lf`, but that governs editors, not Git.
+  `git add --renormalize .` was a no-op, so no existing blob changed.
 
 ## [1.0.1] - 2026-08-01
 

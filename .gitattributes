@@ -1,0 +1,11 @@
+# Normalize all text files to LF in the repository. Working-tree endings are
+# still the checkout platform's business; the stored blob is always LF.
+* text=auto
+
+# The Unix start script must stay LF even on a Windows checkout, and the Windows
+# script must be CRLF or cmd.exe mis-parses labels and multi-line set blocks.
+/gradlew    text eol=lf
+*.bat       text eol=crlf
+
+# Never run end-of-line conversion over binaries.
+*.jar       binary
