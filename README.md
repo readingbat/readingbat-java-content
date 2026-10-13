@@ -32,7 +32,8 @@ make cc             # Continuous compilation (watches for changes)
 make run            # Start the content server locally (port 8080)
 make uberjar        # Build fat jar at build/libs/server.jar
 make uber           # Build the uberjar and run it
-make versions       # Check for dependency updates
+make versions       # List dependencies with newer versions
+make versions-all   # Full dependency report, up-to-date dependencies included
 ```
 
 When running locally, challenge files are loaded directly from disk (via
@@ -102,7 +103,11 @@ gradle/libs.versions.toml          # Centralized dependency & toolchain versions
 ## Tech Stack
 
 - Kotlin / JVM, Gradle (Kotlin DSL) with a version catalog
-- [readingbat-core](https://github.com/readingbat/readingbat-core) — the platform library (from JitPack)
+- [readingbat-core](https://github.com/readingbat/readingbat-core) — the platform library (from Maven Central)
+- Kotlin's JSR-223 scripting runtime, which computes the Kotlin challenges' answers, is held at
+  2.4.10 by the `kotlin-scripting` catalog version while the project builds with a newer Kotlin.
+  From 2.4.20 the engine never releases a script's compiler environment (about 27 MB each), and
+  the challenge sweep runs out of heap; see `configureScripting()` in `build.gradle.kts`.
 - Ktor test host + Kotest — challenge validation
 - detekt + kotlinter — static analysis and formatting
 

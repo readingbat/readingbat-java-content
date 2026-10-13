@@ -7,7 +7,7 @@ This is a **ReadingBat content repository** — it defines Java and Kotlin progr
 ## Conventions
 
 Record notable changes in `CHANGELOG.md` under an `[Unreleased]` heading; it becomes the
-next version's section at release time. Releases are tagged without a `v` prefix (`1.1.0`),
+next version's section at release time. Releases are tagged without a `v` prefix (`1.2.0`),
 and the version lives in `gradle.properties`.
 
 `.gitattributes` governs line endings: stored blobs are LF, `gradlew` stays LF, and
@@ -20,6 +20,23 @@ and the version lives in `gradle.properties`.
 ```bash
 ./gradlew test -Dkotest.filter.tests="<name>"  # Filter Kotest cases by name
 ```
+
+`gradle.properties` turns the configuration cache on, so build logic has to be
+configuration-cache safe. `dependencyUpdates` is marked incompatible, and the `make versions`
+targets pass `--no-configuration-cache` for it.
+
+## Dependencies
+
+Every version lives in `gradle/libs.versions.toml`. One is deliberately out of step:
+`kotlin-scripting` holds the runtime Kotlin scripting jars (`kotlin-scripting-*`,
+`kotlin-compiler-embeddable`, `kotlin-daemon-embeddable`, `kotlin-script-runtime`) at 2.4.10
+while `kotlin` moves on, and `configureScripting()` in `build.gradle.kts` applies it to
+`runtimeClasspath` and `testRuntimeClasspath` only. From Kotlin 2.4.20 the JSR-223 engine
+never disposes a script state's compiler environment (about 27 MB each), and readingbat-core
+starts a state for every Kotlin challenge, so without the pin `ContentTests` runs out of heap
+in the Kotlin sweep. Leave it in place when upgrading Kotlin. Remove it only after a Kotlin
+release fixes the engine or readingbat-core pins the jars itself, and confirm with
+`make clean tests`.
 
 ## Testing
 

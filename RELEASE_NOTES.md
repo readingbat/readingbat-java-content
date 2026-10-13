@@ -8,6 +8,40 @@ changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
+## v1.2.0 (October 2026)
+
+A dependency release that turned into a memory investigation. Moving to readingbat-core
+3.5.0 and Kotlin 2.4.21 made `ContentTests` fail partway through the Kotlin sweep with
+`OutOfMemoryError`, and a larger test heap did not help: with 2 GB, full collections
+freed almost nothing, and the heap stayed full.
+
+The cause is a regression in Kotlin's JSR-223 script engine, which readingbat-core uses
+to compute each Kotlin challenge's answers. From Kotlin 2.4.20 the engine is built on the
+K2 REPL, and every new script state builds a complete compiler environment (a project,
+FIR sessions, and an index of the whole classpath) that is never disposed, so each one
+stays reachable for the life of the JVM, about 27 MB apiece here. readingbat-core resets
+its pooled engine after every challenge, which starts a new state, so the sweep piled up
+an environment per Kotlin challenge. The 2.4.10 engine released the same states, and
+creating a fresh engine per script leaks just as badly on 2.4.21, so this is Kotlin's,
+not the pooling's.
+
+The fix keeps the runtime scripting jars on 2.4.10 while everything else moves forward.
+A new `kotlin-scripting` catalog version is applied by `configureScripting()` to the
+runtime and test classpaths only, so the project still compiles with Kotlin 2.4.21 and
+challenge code is compiled by the 2.4.10 engine. With the pin in place the full suite
+passes in about 30 seconds. The pin is temporary: it can go once a Kotlin release disposes
+the state, or once readingbat-core carries the same pin itself.
+
+Two build changes ship alongside. `make versions` now lists only what is behind (plus
+anything it could not check and a pending Gradle upgrade), and `make versions-all` keeps
+the versions plugin's full report. `gradle.properties` turns the Gradle configuration
+cache on and gives the Gradle and Kotlin daemons a 6 GB heap with heap dumps on
+`OutOfMemoryError`.
+
+Dependencies: readingbat-core 3.5.0, Kotlin 2.4.21 (scripting runtime held at 2.4.10),
+common-utils 5.1.1, the versions plugin 0.66.0, and the Gradle wrapper 9.8.1. No
+challenge content changed in this release.
+
 ## v1.1.0 (September 2026)
 
 A test-reliability release, prompted by a CI failure on a pull request that contained no
