@@ -8,6 +8,39 @@ grouped by date and milestone rather than semantic version. The content tracks
 the [readingbat-core](https://github.com/readingbat/readingbat-core) platform, so
 many entries reflect dependency and toolchain upgrades.
 
+## [1.2.0] - 2026-10-13
+
+Dependency upkeep, and the memory fix that the new Kotlin scripting runtime made
+necessary. No challenge content changed.
+
+### Changed
+- Bumped `version` in `gradle.properties` to `1.2.0`.
+
+- Upgraded dependencies: readingbat-core `3.4.0` → `3.5.0`, Kotlin `2.4.10` → `2.4.21`,
+  common-utils `3.2.2` → `5.1.1`, and the Gradle versions plugin `0.64.0` → `0.66.0`.
+  Ktor (`3.6.0`), Kotest (`6.2.5`), kotlinter (`5.7.0`), detekt (`2.0.0-alpha.6`), and the
+  JVM toolchain (**25**) are unchanged.
+
+- Upgraded the Gradle wrapper `9.7.1` → `9.8.1`, which also regenerates `gradlew.bat`.
+
+- `gradle.properties` turns the Gradle configuration cache on, and gives the Gradle and
+  Kotlin daemons a 6 GB heap with `-XX:+HeapDumpOnOutOfMemoryError`.
+
+- `make versions` now prints only the dependencies with newer versions, any that
+  could not be checked, and a pending Gradle upgrade, via a custom `outputFormatter`
+  on `dependencyUpdates` in `build.gradle.kts`. The new `make versions-all` target
+  passes `--output-formatter=plain` for the plugin's full report, which also lists
+  every dependency already up to date.
+
+- Held the runtime Kotlin scripting jars (`kotlin-scripting-*`, `kotlin-compiler-embeddable`,
+  `kotlin-daemon-embeddable`, `kotlin-script-runtime`) at `2.4.10` through a new
+  `kotlin-scripting` catalog version, applied by `configureScripting()` to the runtime and
+  test classpaths only; the project itself builds with Kotlin `2.4.21`. From Kotlin
+  `2.4.20` on, the JSR-223 engine never disposes a script state's compiler environment, so
+  each state keeps about 27 MB reachable. readingbat-core `3.5.0`, which brings in the
+  `2.4.21` scripting jars, resets its pooled engine after every Kotlin challenge, so
+  `ContentTests` ran out of heap partway through the Kotlin sweep, even with a 2 GB heap.
+
 ## [1.1.0] - 2026-09-21
 
 Test-reliability and dependency upkeep. No challenge content changed.

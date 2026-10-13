@@ -20,7 +20,9 @@ Each challenge is a standalone source file. The `main()` function prints expecte
 ## Tech Stack
 
 - Kotlin / JVM, Gradle (Kotlin DSL) with a version catalog. The JVM toolchain version is centralized in `gradle/libs.versions.toml` under the `jvm` key.
-- readingbat-core (platform library, from JitPack)
+- readingbat-core (platform library, from Maven Central)
+- Kotlin's JSR-223 scripting runtime is pinned to 2.4.10 (`kotlin-scripting` in the version catalog, applied by `configureScripting()` to the runtime and test classpaths only) while the project builds with a newer Kotlin. From 2.4.20 the engine never disposes a script state's compiler environment (~27 MB each), and readingbat-core starts a state per Kotlin challenge, so the test sweep runs out of heap without the pin.
+- The Gradle configuration cache is on (`gradle.properties`); `dependencyUpdates` opts out, so the `make versions` targets pass `--no-configuration-cache`.
 - Kotest + Ktor test host (testing)
 - detekt + kotlinter (static analysis and formatting, enforced in CI)
 
@@ -35,7 +37,8 @@ Run `make help` for the authoritative target list.
 - `make run` — start the content server on http://localhost:8080
 - `make uberjar` — build fat jar at `build/libs/server.jar`
 - `make uber` — build uberjar and run it
-- `make versions` — check for dependency updates
+- `make versions` — list only the dependencies (and Gradle) with newer versions, plus any that could not be checked
+- `make versions-all` — the versions plugin's full plain report, up-to-date dependencies included
 - `./gradlew test -Dkotest.filter.tests="<name>"` — filter Kotest cases by name
 
 ## Testing
